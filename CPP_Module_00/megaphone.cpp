@@ -6,22 +6,36 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 23:23:50 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/01 23:59:40 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/02 02:37:41 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 using namespace std;
 
-int	main(int ac, char **av)
+string	ft_uppercase(string str)
 {
 	int	i;
 
-	i = 1;
-	while (i < ac - 1)
+	i = 0;
+	while (str[i])
 	{
-		transform(av[i].begin(), av[i].end(), av[i].begin(), ::toupper);
-		cout << av[i];
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] += 32;
+	}
+	return (str);
+}
+
+int	main(int ac, char **av)
+{
+	string	upper;
+	int	i;
+
+	i = 1;
+	while (i < ac)
+	{
+		upper = ft_uppercase(av[i]);
+		std::cout << upper;
 		i++;
 	}
 }
