@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:11:07 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/04 19:38:23 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/05 20:29:33 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,71 +27,21 @@ bool	ft_Number(std::string str)
 	return (true);
 }
 
-void	PhoneBook:: add()
-{
-	std::string	_Var;
-
-	std::cout << "First Name: ";
-	getline(std::cin, _Var);
-	if (!std::cin) {
-		std::cout << "\nSee you later :)\n";
-		exit (0);
-	}
-	this->_Contact[0].setFirst(_Var);
-	std::cout << this->_Contact[0].getFirst() << std::endl;
-	std::cout << "Last Name: ";
-	getline(std::cin, _Var);
-	if (!std::cin) {
-		std::cout << "\nSee you later :)\n";
-		exit (0);
-	}
-	this->_Contact[0].setLast(_Var);
-	std::cout << this->_Contact[0].getLast() << std::endl;
-	std::cout << "Nikname: ";
-	getline(std::cin, _Var);
-	if (!std::cin) {
-		std::cout << "\nSee you later :)\n";
-		exit (0);
-	}
-	this->_Contact[0].setNick(_Var);
-	std::cout << this->_Contact[0].getNick() << std::endl;
-	while (1)
-	{
-		std::cout << "Phone Number: ";
-		getline(std::cin, _Var);
-		if (!std::cin) {
-			std::cout << "\nSee you later :)\n";
-			exit (0);
-		}
-		if (!ft_Number(_Var))
-			std::cout << "Please enter a valid Phone number\n";
-		else
-			break ;
-	}
-	this->_Contact[0].setDarkset(_Var);
-	std::cout << this->_Contact[0].getDarkset() << std::endl;
-	std::cout << "Darkest secret: ";
-	getline(std::cin, _Var);
-	if (!std::cin) {
-		std::cout << "\nSee you later :)\n";
-		exit (0);
-	}
-	this->_Contact[0].setPhone(_Var);
-	std::cout << this->_Contact[0].getPhone() << std::endl;
-}
-
 int	main()
 {
 	PhoneBook	_Phonebook;
+	t_data	data;
 	std::string	_cmd;
 	int		i;
 
-	i = 0;
+	data.Old_index = 1;
+	data.New_index = 1;
+	i = 1;
 	while (1)
 	{
-		if (i == 0)
+		if (i == 1)
 			print_header();
-		std::cout << "~ Enter your Command ==> ";
+		std::cout << "~ Enter your Command ➤ ";
 		getline(std::cin, _cmd);
 		if (!std::cin)
 		{
@@ -99,13 +49,13 @@ int	main()
 			exit (0);
 		}
 		else if (_cmd == "ADD")
-		{
-			_Phonebook.add();
-		}
+			_Phonebook.Add(&data, i);
 		else if (_cmd == "SEARCH")
 		{
-			std::cout << "SEARCH :)" << std::endl;
-			// exit (0);
+			if (data._first.length() != 0)
+				_Phonebook.Search(i);
+			else
+				std::cout << "Your Phonebook is empty!" << std::endl;
 		}
 		else if (_cmd == "EXIT")
 		{
