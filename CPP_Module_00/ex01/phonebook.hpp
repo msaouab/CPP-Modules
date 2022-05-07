@@ -1,40 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/03 16:11:30 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/05 20:16:13 by msaouab          ###   ########.fr       */
+/*   Created: 2022/05/06 11:06:45 by msaouab           #+#    #+#             */
+/*   Updated: 2022/05/07 14:33:39 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 /* code */
-
 # include <iostream>
 # include <string.h>
-# include "Contact.hpp"
-
-// using std::cout;
-// using std::string;
-
-# define	true 1
-# define	false 0
-
+# include <cstdlib>
+# include "./Contact.hpp"
 class	PhoneBook {
 	Contact	_Contact[8];
+	int		New;
+	int		Old;
 	public:
 		PhoneBook() {};
-		void		Add(t_data *data, int	i);
-		void		Search(int count);
+		int		Add(int i, int count);
+		void	Search(PhoneBook phone, int count);
+		void showIndex(int index);
 };
 
-// PhoneBook::PhoneBook(void){};
-
-bool	ft_Number(std::string str);
-void	print_header(void);
-
+void	print_header();
+void	exit_with_D();
+void	print_header_table();
+void	fill_table(std::string str);
+void	get_result(PhoneBook phone, int count);
 #endif //PHONEBOOK_HPP

@@ -5,55 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 11:14:45 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/05 20:31:47 by msaouab          ###   ########.fr       */
+/*   Created: 2022/05/06 11:07:19 by msaouab           #+#    #+#             */
+/*   Updated: 2022/05/06 14:18:19 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
-#define CONTACT_HPP
+# define CONTACT_HPP
 /* code */
 # include <iostream>
 # include <string.h>
-
-typedef struct s_data
-{
-	std::string	_first;
-	std::string	_last;
-	std::string	_nick;
-	std::string	_phone;
-	std::string	_dark;
-	int			Old_index;
-	int			New_index;
-}	t_data;
-
-typedef struct s_print
-{
-	std::string	_first;
-	std::string	_last;
-	std::string	_nick;
-	std::string	_phone;
-	std::string	_dark;
-}	t_print;
-
 class	Contact {
 	std::string	_First;
 	std::string	_Last;
 	std::string	_Nick;
-	std::string	_Darkset;
 	std::string	_Phone;
+	std::string	_Dark;
 	public:
-		Contact() {};
-		void		setFirst(std::string _var);
-		void		setLast(std::string _var);
-		void		setNick(std::string _var);
-		void		setPhone(std::string _var);
-		void		setDarkset(std::string _var);
-		std::string	getFirst();
-		std::string	getLast();
-		std::string	getNick();
-		std::string	getPhone();
-		std::string	getDarkset();
+		Contact() {}; 
+		void	setfirst(std::string _fist);
+		void	setlast(std::string _last);
+		void	setnick(std::string _nick);
+		void	setphone(std::string _phone);
+		void	setdark(std::string _dark);
+		std::string	getfirst(void);
+		std::string	getlast(void);
+		std::string	getnick(void);
+		std::string	getphone(void);
+		std::string	getdark(void);
 };
 
-#endif //PHONEBOOK_HPP
+#endif //CONTACT.HPP

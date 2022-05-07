@@ -1,69 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/03 16:11:07 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/05 20:29:33 by msaouab          ###   ########.fr       */
+/*   Created: 2022/05/06 11:06:15 by msaouab           #+#    #+#             */
+/*   Updated: 2022/05/07 14:22:43 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
-#include "phonebook.hpp"
-
-bool	ft_Number(std::string str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] < '0' || str[i] > '9')
-			return (false);
-		i++;
-	}
-	return (true);
-}
+#include "./Phonebook.hpp"
 
 int	main()
 {
-	PhoneBook	_Phonebook;
-	t_data	data;
-	std::string	_cmd;
-	int		i;
+	PhoneBook	_Phone;
+	std::string	line;
+	int			count;
+	int			i;
 
-	data.Old_index = 1;
-	data.New_index = 1;
-	i = 1;
+	i = 0;
+	count = 0;
+	print_header();
 	while (1)
 	{
-		if (i == 1)
-			print_header();
-		std::cout << "~ Enter your Command ➤ ";
-		getline(std::cin, _cmd);
+		// if (i == 0)
+		std::cout << "Enter Your Command ➤ ";
+		getline(std::cin, line);
 		if (!std::cin)
+			exit_with_D();
+		else if (line == "ADD")
 		{
-			std::cout << std::endl << "Bad Command!!. try again" << std::endl;
-			exit (0);
+			count = _Phone.Add(i, count);
+			i++;
+			if (i == 8)
+				i = 0;
 		}
-		else if (_cmd == "ADD")
-			_Phonebook.Add(&data, i);
-		else if (_cmd == "SEARCH")
-		{
-			if (data._first.length() != 0)
-				_Phonebook.Search(i);
-			else
-				std::cout << "Your Phonebook is empty!" << std::endl;
-		}
-		else if (_cmd == "EXIT")
-		{
-			std::cout << "See you later :)" << std::endl;
-			exit (0);
-		}
-		else if (_cmd.length() > 0)
-			std::cout << _cmd << ": Your Command Not Exist!, `please try again`." << std::endl;
-		i++;
+		else if (line == "SEARCH")
+			_Phone.Search(_Phone, count);
+		else if (line == "EXIT")
+			exit_with_D();
+		else
+			std::cout << "Sorry your command it's not Exist yet :)" << std::endl;
 	}
 }

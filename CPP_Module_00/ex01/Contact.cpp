@@ -5,59 +5,50 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 18:53:33 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/05 12:34:27 by msaouab          ###   ########.fr       */
+/*   Created: 2022/05/06 14:13:44 by msaouab           #+#    #+#             */
+/*   Updated: 2022/05/06 14:21:03 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
+#include "./Phonebook.hpp"
 
-void	Contact::setFirst(std::string _var)
+void	Contact::setfirst(std::string _first)
 {
-	_First = _var;
+	_First = _first;
 }
-
-void	Contact::setLast(std::string _var)
+void	Contact::setlast(std::string _last)
 {
-	_Last = _var;
+	_Last = _last;
 }
-
-void	Contact::setNick(std::string _var)
+void	Contact::setnick(std::string _nick)
 {
-	_Nick = _var;
+	_Nick = _nick;
 }
-
-void	Contact::setDarkset(std::string _var)
+void	Contact::setphone(std::string _phone)
 {
-	_Darkset = _var;
+	_Phone = _phone;
 }
-
-void	Contact::setPhone(std::string _var)
+void	Contact::setdark(std::string _dark)
 {
-	_Phone = _var;
+	_Dark = _dark;
 }
-
-std::string	Contact::getFirst()
+std::string	Contact::getfirst(void)
 {
-	return this->_First;
+	return (_First);
 }
-
-std::string	Contact::getLast()
+std::string	Contact::getlast(void)
 {
-	return this->_Last;
+	return (_Last);
 }
-
-std::string	Contact::getNick()
+std::string	Contact::getnick(void)
 {
-	return this->_Nick;
+	return (_Nick);
 }
-
-std::string	Contact::getDarkset()
+std::string	Contact::getphone(void)
 {
-	return this->_Darkset;
+	return (_Phone);
 }
-
-std::string	Contact::getPhone()
+std::string	Contact::getdark(void)
 {
-	return this->_Phone;
+	return (_Dark);
 }

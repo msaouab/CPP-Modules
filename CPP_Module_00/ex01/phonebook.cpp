@@ -1,122 +1,114 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 14:14:12 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/05 20:31:56 by msaouab          ###   ########.fr       */
+/*   Created: 2022/05/06 12:51:13 by msaouab           #+#    #+#             */
+/*   Updated: 2022/05/07 14:36:10 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "./phonebook.hpp"
-# include "Contact.hpp"
+#include "./Phonebook.hpp"
 
-// void	
-
-void	PhoneBook:: Add(t_data *data, int	i)
+void	exit_with_D()
 {
-	std::cout << "First Name: ";
-	getline(std::cin, data->_first);
-	if (!std::cin) {
-		std::cout << "\nSee you later :)\n";
-		exit (0);
-	}
-	std::cout << "Last Name: ";
-	getline(std::cin, data->_last);
-	if (!std::cin) {
-		std::cout << "\nSee you later :)\n";
-		exit (0);
-	}
-	std::cout << "Nikname: ";
-	getline(std::cin, data->_nick);
-	if (!std::cin) {
-		std::cout << "\nSee you later :)\n";
-		exit (0);
-	}
-	while (1)
-	{
-		std::cout << "Phone Number: ";
-		getline(std::cin, data->_phone);
-		if (!std::cin) {
-			std::cout << "\nSee you later :)\n";
-			exit (0);
-		}
-		if (!ft_Number(data->_phone))
-			std::cout << "Please enter a valid Phone number\n";
-		else
-			break ;
-	}
-	std::cout << "Darkest secret: ";
-	getline(std::cin, data->_dark);
-	if (!std::cin) {
-		std::cout << "\nSee you later :)\n";
-		exit (0);
-	}
-	if (data->Old_index == 8)
-		data->Old_index = data->New_index;
-	this->_Contact[data->Old_index].setFirst(data->_first);
-	this->_Contact[data->Old_index].setLast(data->_last);
-	this->_Contact[data->Old_index].setNick(data->_nick);
-	this->_Contact[data->Old_index].setPhone(data->_phone);
-	this->_Contact[data->Old_index].setDarkset(data->_dark);
-	data->Old_index++;
+	std::cout << std::endl << " ==> See you later :)" << std::endl;
+	exit (0);
 }
 
-void	printer(std::string str)
+int	PhoneBook::Add(int i, int count)
 {
-	std::string	sub;
+	std::string	_first;
+	std::string	_last;
+	std::string	_nick;
+	std::string	_phone;
+	std::string	_dark;
 
+	std::cout << "First Name: ";
+	getline(std::cin, _first);
+	if (!std::cin)
+		exit_with_D();
+	std::cout << "Last Name: ";
+	getline(std::cin, _last);
+	if (!std::cin)
+		exit_with_D();
+	std::cout << "NickName Name: ";
+	getline(std::cin, _nick);
+	if (!std::cin)
+		exit_with_D();
+	std::cout << "PhoneNumber Name: ";
+	getline(std::cin, _phone);
+	if (!std::cin)
+		exit_with_D();
+	std::cout << "darkSet: ";
+	getline(std::cin, _dark);
+	if (!std::cin)
+		exit_with_D();
+	this->_Contact[i].setfirst(_first);
+	this->_Contact[i].setlast(_last);
+	this->_Contact[i].setnick(_nick);
+	this->_Contact[i].setphone(_phone);
+	this->_Contact[i].setdark(_dark);
+	if (count < 8)
+		count++;
+	return (count);
+}
+
+void	PhoneBook::Search(PhoneBook phone, int count)
+{
+	std::string	first;
+	std::string	last;
+	std::string	nick;
 	int	i;
 
-	i = 0;
-	if (str.length() < 10)
+	print_header_table();
+	if (count == 0)
 	{
-		while (i < (10 - str.length()))
-		{
-			std::cout << " ";
-			i++;
-		}
-		std::cout << str;
+		std::cout << "|     You don't have any Contact yet!!.     |";
+		std::cout << std::endl << " -------------------------------------------" << std::endl;
 	}
 	else
 	{
-		sub = str.substr(0, 9);
-		std::cout << sub << ".";
+		i = 0;
+		while (i < count)
+		{
+			std::cout << "|         " << i + 1 << "|";
+			first = this->_Contact[i].getfirst();
+			fill_table(first);
+			last = this->_Contact[i].getlast();
+			fill_table(last);
+			nick = this->_Contact[i].getnick();
+			fill_table(nick);
+			std::cout << std::endl << " -------------------------------------------" << std::endl;
+			i++;
+		}
+		get_result(phone, count);
 	}
-	std::cout << "|";
 }
 
-void	fill_table(t_print *print, int i)
+void PhoneBook::showIndex(int index)
 {
-	std::cout << "|         " << i << "|";
-	printer(print->_first);
-	printer(print->_last);
-	printer(print->_nick);
-	printer(print->_phone);
-	printer(print->_dark);
-	std::cout << std::endl << " -----------------------------------------------------------------" << std::endl;
-	std::cout <<std::endl;
-}
+	std::string	first;
+	std::string	last;
+	std::string	nick;
+	std::string	phone;
+	std::string	dark;
 
-void	PhoneBook::Search(int count)
-{
-	t_print	print;
-	int	i;
-
-	std::cout << " _________________________________________________________________" << std::endl;
-	std::cout << "|" << "   Index  " << "|" << "First Name" << "|" << " Last Name" << "|" << " Nickname " << "|" << "   Phone  " << "|" << "  Darkset " << "|" <<std::endl;
 	std::cout << " -----------------------------------------------------------------" << std::endl;
-	i = 0;
-	while (++i < count)
-	{
-		print._first = this->_Contact[i].getFirst();
-		print._last = this->_Contact[i].getLast();
-		print._nick = this->_Contact[i].getNick();
-		print._phone = this->_Contact[i].getPhone();
-		print._dark = this->_Contact[i].getDarkset();
-		if (print._first.length() != 0)
-			fill_table(&print, i);
-	}
+	std::cout << "|   Index  | FirstName| LastName | NickName |PhoneNumbr|  DarkSet |" << std::endl;
+	std::cout << " -----------------------------------------------------------------" << std::endl;
+	std::cout <<  "|         " << index + 1<< "|";
+	first = this->_Contact[index].getfirst();
+	fill_table(first);
+	last = this->_Contact[index].getlast();
+	fill_table(last);
+	nick = this->_Contact[index].getnick();
+	fill_table(nick);
+	phone = this->_Contact[index].getphone();
+	fill_table(phone);
+	dark = this->_Contact[index].getdark();
+	fill_table(dark);
+	std::cout << std::endl << " -----------------------------------------------------------------" << std::endl;
 }
