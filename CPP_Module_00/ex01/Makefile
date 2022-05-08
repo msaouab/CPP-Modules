@@ -6,7 +6,7 @@
 #    By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:28:16 by msaouab           #+#    #+#              #
-#    Updated: 2022/05/06 11:06:43 by msaouab          ###   ########.fr        #
+#    Updated: 2022/05/08 17:14:49 by msaouab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,23 +17,32 @@ SRC =	Main.cpp\
 		Contact.cpp\
 		Phonebook.cpp\
 
-OBJ = $(SRC:%.cpp=%.o)
+INCLUDE = Phonebook.hpp Contact.hpp
+
+OBJ = $(SRC:.cpp=.o)
 
 CC = clang++ -std=c++98
 
 CFLAGS = -Wall -Wextra -Werror
 
-INCLUDE = Phonebook.hpp Contact.hpp
+bold = $(shell tput bold)
 
-all : $(NAME)
+magenta = `tput setaf 5`
+
+ED = \033[0m
+
+all : $(NAME) clean
 
 $(NAME): $(OBJ) $(INCLUDE)
-		$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+		@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+		@echo "$(bold)$(magenta)Combilation Done.$(ED)"
 
 clean: 
-		rm -f $(OBJ)
+		@rm -f $(OBJ)
+		@echo "clean Done."
 
-fclean: clean
-		rm -f $(NAME)
+fclean: 
+		@rm -f $(NAME)
+		@echo "fclean Done."
 
 re: fclean all

@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:06:15 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/07 14:22:43 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/07 15:27:32 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int	main()
 	print_header();
 	while (1)
 	{
-		// if (i == 0)
 		std::cout << "Enter Your Command ➤ ";
 		getline(std::cin, line);
 		if (!std::cin)

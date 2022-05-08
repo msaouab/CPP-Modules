@@ -6,7 +6,7 @@
 #    By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:28:16 by msaouab           #+#    #+#              #
-#    Updated: 2022/05/03 11:18:35 by msaouab          ###   ########.fr        #
+#    Updated: 2022/05/08 17:17:04 by msaouab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,23 +14,30 @@ NAME = megaphone
 
 SRC = megaphone.cpp\
 
-OBJ = $(SRC:.c=.o)
+OBJ = $(SRC:.cpp=.o)
 
-CC = g++
-
-VRS = -std=c++98
+CC = clang++ -std=c++98
 
 CFLAGS = -Wall -Wextra -Werror
 
-all : $(NAME)
+bold = $(shell tput bold)
+
+magenta = `tput setaf 5`
+
+ED = \033[0m
+
+all : $(NAME) clean
 
 $(NAME): $(OBJ)
-		$(CC) $(CFLAGS) $(VRS) $(OBJ) -o $(NAME)
+		@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+		@echo "$(bold)$(magenta)Combilation Done.$(ED)"
 
-clean: 
-		rm -f $(NAME)
+clean:
+		@rm -f $(OBJ)
+		@echo "clean Done."
 
-fclean: clean
-		rm -f $(NAME)
+fclean: 
+		@rm -f $(NAME)
+		@echo "fclean Done."
 
 re: fclean all
