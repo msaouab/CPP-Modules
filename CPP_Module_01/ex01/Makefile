@@ -6,16 +6,15 @@
 #    By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:28:16 by msaouab           #+#    #+#              #
-#    Updated: 2022/05/09 10:51:40 by msaouab          ###   ########.fr        #
+#    Updated: 2022/05/09 14:18:42 by msaouab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Zombie
+NAME = Moar_brainz
 
 SRC =	main.cpp\
 		Zombie.cpp\
-		newZombie.cpp\
-		randomChump.cpp\
+		zombieHorde.cpp\
 
 INCLUDE = Zombie.hpp
 
@@ -41,7 +40,7 @@ clean:
 		@rm -f $(OBJ)
 		@echo "clean Done."
 
-fclean:
+fclean: 
 		@rm -f $(NAME)
 		@echo "fclean Done."
 

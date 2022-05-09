@@ -6,11 +6,11 @@
 #    By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:28:16 by msaouab           #+#    #+#              #
-#    Updated: 2022/05/09 11:08:52 by msaouab          ###   ########.fr        #
+#    Updated: 2022/05/09 12:41:25 by msaouab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Zombie
+NAME = BraiiiiiiinnnzzzZ
 
 SRC =	main.cpp\
 		Zombie.cpp\

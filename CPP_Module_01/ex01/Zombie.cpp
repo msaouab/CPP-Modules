@@ -6,17 +6,25 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 19:02:59 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/09 10:59:24 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/09 15:10:48 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./Zombie.hpp"
 
-void	Zombie::announce(void)
+void	Zombie::announce(int n)
 {
-	std::cout << _name;
-	std::cout << ": BraiiiiiiinnnzzzZ...";
-	std::cout << std::endl;
+	int	i;
+
+	i = 0;
+	while (i < n)
+	{
+		std::cout << _name;
+		std::cout << " " << i;
+		std::cout << ": BraiiiiiiinnnzzzZ...";
+		std::cout << std::endl;
+		i++;
+	}
 }
 
 Zombie::Zombie(std::string _name)

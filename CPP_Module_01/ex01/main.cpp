@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 19:02:39 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/09 11:00:33 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/09 14:25:53 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 int	main()
 {
 	Zombie	ZombiesSchool;
+	int		n;
 
-	randomChump("msaouab");
-	randomChump("Ilyass");
-	randomChump("Issam");
-	randomChump("Youssef");
-	randomChump("Oussama");
+	n = 5;
+	randomChump("msaouab", n);
 }

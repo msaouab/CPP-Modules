@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 19:03:01 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/09 10:43:24 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/09 14:13:57 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ class	Zombie {
 		Zombie(std::string _name);
 		Zombie();
 		~Zombie();
-		void	announce();
+		void	announce(int i);
 };
 
 /* function */
-Zombie*	newZombie( std::string _name );
-void	randomChump( std::string _name );
+Zombie* zombieHorde( int N, std::string _name );
+void	randomChump(std::string _name, int n);
 
 #endif //ZOMBIE_HPP
