@@ -1,0 +1,10 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/msaouab/Desktop/42Cursus/CPP-Modules/CPP_Module_01/ex01'
+c++    -c -o main.o main.cpp
+c++    -c -o Zombie.o Zombie.cpp
+c++    -c -o zombieHorde.o zombieHorde.cpp
+ 
+clang++ -std=c++98 -Wall -Wextra -Werror main.o Zombie.o zombieHorde.o -o Moar_brainz
+echo "[1m`tput setaf 5`Combilation Done.\033[0m"
+make: Leaving directory `/Users/msaouab/Desktop/42Cursus/CPP-Modules/CPP_Module_01/ex01'
+ 

@@ -6,7 +6,7 @@
 #    By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:28:16 by msaouab           #+#    #+#              #
-#    Updated: 2022/05/09 14:18:42 by msaouab          ###   ########.fr        #
+#    Updated: 2022/05/10 14:13:18 by msaouab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ magenta = `tput setaf 5`
 
 ED = \033[0m
 
-all : $(NAME) clean
+all : $(NAME)
 
 $(NAME): $(OBJ) $(INCLUDE)
 		@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
@@ -40,7 +40,7 @@ clean:
 		@rm -f $(OBJ)
 		@echo "clean Done."
 
-fclean: 
+fclean: clean
 		@rm -f $(NAME)
 		@echo "fclean Done."
 
