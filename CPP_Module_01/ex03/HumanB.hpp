@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 13:34:14 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/11 14:24:46 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/11 16:54:50 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,19 @@
 # include <iostream>
 # include <ostream>
 # include "./Weapon.hpp"
-# include "./HumanA.hpp"
-# include "./HumanB.hpp"
 
 /* Class */
 
 class HumanB {
 	private:
-		Weapon		_club;
+		Weapon		*_club;
 		std::string	_name;
 	public:
 		HumanB(std::string name);
 		HumanB();
 		~HumanB();
-		void	setWeapon(Weapon club);
-		Weapon	getWeapon();
+		void	setWeapon(Weapon &club);
+		Weapon*	getWeapon();
 		void	attack(void);
 };
 

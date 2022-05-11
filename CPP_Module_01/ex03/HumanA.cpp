@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 13:34:10 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/11 14:28:21 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/11 17:13:39 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,25 @@
 #include "./HumanA.hpp"
 #include "./HumanB.hpp"
 
-HumanA::HumanA() {
+HumanA::HumanA(std::string name, Weapon &club) :_club(club) {
+	_name = name;
 }
+
 
 HumanA::~HumanA() {
 }
 
-HumanA::HumanA(std::string name, Weapon club) {
-	_name = name;
-	_club = club;
+void	HumanA::setWeapon(Weapon club) {
+	this->_club = club;
 }
 
-void	HumanB::attack(void) {
-	std::cout << name;
+Weapon	HumanA::getWeapon() {
+	return (_club);
+}
+
+void	HumanA::attack(void) {
+	std::cout << _name;
 	std::cout << " attacks with their ";
-	std::cout << club;
+	std::cout << getWeapon().getType();
 	std::cout << std::endl;
 }

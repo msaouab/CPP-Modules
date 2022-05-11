@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 13:34:18 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/11 14:24:27 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/11 16:58:59 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 /* Includes */
 # include <iostream>
 # include <ostream>
-# include "./Weapon.hpp"
-# include "./HumanA.hpp"
-# include "./HumanB.hpp"
 
 /* Class */
 
