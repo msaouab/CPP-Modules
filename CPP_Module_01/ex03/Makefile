@@ -6,17 +6,20 @@
 #    By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:28:16 by msaouab           #+#    #+#              #
-#    Updated: 2022/05/10 19:38:46 by msaouab          ###   ########.fr        #
+#    Updated: 2022/05/11 14:14:26 by msaouab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Unnecessary_Violence
 
 SRC =	main.cpp\
+		Weapon.cpp\
+		HumanA.cpp\
+		HumanB.cpp\
 
-INCLUDE =	HumanA.hpp\
+INCLUDE =	Weapon.hpp\
+			HumanA.hpp\
 			HumanB.hpp\
-			Weapon.hpp\
 
 OBJ = $(SRC:.cpp=.o)
 

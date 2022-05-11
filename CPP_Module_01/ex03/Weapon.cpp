@@ -5,27 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 19:52:04 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/10 20:54:07 by msaouab          ###   ########.fr       */
+/*   Created: 2022/05/11 13:34:16 by msaouab           #+#    #+#             */
+/*   Updated: 2022/05/11 14:20:20 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./Weapon.hpp"
+#include "./HumanA.hpp"
+#include "./HumanB.hpp"
 
-Weapon::Weapon()
-{
+Weapon::Weapon(/* args */) {
 }
 
-Weapon::~Weapon()
-{
+Weapon::~Weapon() {
 }
 
-void	Weapon::setType(std::string type)
-{
-	this->type = type;
+void	Weapon::setType(std::string type) {
+	_type = type;
 }
 
-std::string	Weapon::getType(void)
-{
-	return (type);
+std::string	Weapon::getType(void) {
+	return _type;
 }

@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `main.o', needed by `Unnecessary_Violence'.  Stop.
 
 
-# Make data base, printed on Tue May 10 19:45:46 2022
+# Make data base, printed on Wed May 11 14:14:34 2022
 
 # Variables
 
@@ -18,10 +18,10 @@ make: *** No rule to make target `main.o', needed by `Unnecessary_Violence'.  St
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
-# makefile (from `Makefile', line 21)
+# makefile (from `Makefile', line 24)
 OBJ = $(SRC:.cpp=.o)
 # makefile (from `Makefile', line 15)
-SRC = main.cpp 
+SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp 
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -38,20 +38,20 @@ SHELL = /bin/sh
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
-# makefile (from `Makefile', line 25)
+# makefile (from `Makefile', line 28)
 CFLAGS = -Wall -Wextra -Werror
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
-# makefile (from `Makefile', line 31)
+# makefile (from `Makefile', line 34)
 ED = \033[0m
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00007dm0001vd/T/vscode-ipc-9d2f0e32-b37e-470b-92a8-56fe827a6bd2.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00007dm0001vd/T/vscode-ipc-c0e90b0e-c24d-492c-a6b2-94aad90f4b86.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.qdJGucEepQ/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.9Sk9qdt0CA/Render
 # environment
 PATH = /Users/msaouab/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Library/Frameworks/Mono.framework/Versions/Current/Commands
 # environment
@@ -65,7 +65,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 LS_COLORS = di=34;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=31;40:cd=31;40:su=31;40:sg=31;40:tw=31;40:ow=31;40:
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.s67HNF7oom/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.TAT2NskUGX/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -104,9 +104,9 @@ MAKECMDGOALS := all
 HOMEBREW_CACHE = /tmp/msaouab/Homebrew/Caches
 # environment
 SHLVL = 1
-# makefile (from `Makefile', line 23)
+# makefile (from `Makefile', line 26)
 CC = clang++ -std=c++98
-# makefile (from `Makefile', line 29)
+# makefile (from `Makefile', line 32)
 magenta = `tput setaf 5`
 # default
 MAKE_VERSION := 3.81
@@ -114,8 +114,8 @@ MAKE_VERSION := 3.81
 USER = msaouab
 # makefile
 .DEFAULT_GOAL := all
-# makefile (from `Makefile', line 17)
-INCLUDE = HumanA.hpp HumanB.hpp Weapon.hpp 
+# makefile (from `Makefile', line 20)
+INCLUDE = Weapon.hpp HumanA.hpp HumanB.hpp 
 # makefile (from `Makefile', line 13)
 NAME = Unnecessary_Violence
 # environment
@@ -139,12 +139,12 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000002.Electron
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000005.Electron
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
-# makefile (from `Makefile', line 27)
+# makefile (from `Makefile', line 30)
 bold = $(shell tput bold)
 # environment
 __CF_USER_TEXT_ENCODING = 0x76D:0:0
@@ -171,8 +171,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1198
+VSCODE_PID = 2482
 # variable set hash-table stats:
+ 
 # Load=79/1024=8%, Rehash=0, Collisions=4/107=4%
 
 # Pattern-specific Variable Values
@@ -181,15 +182,21 @@ VSCODE_PID = 1198
 
 # Directories
 
-# . (device 16777227, inode 8120256): 11 files, no impossibilities.
+# . (device 16777227, inode 8120256): 12 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
 
 # Files
+
+# Not a target:
+HumanB.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 all: Unnecessary_Violence
 #  Command-line target.
@@ -200,6 +207,12 @@ all: Unnecessary_Violence
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
+Weapon.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 .SUFFIXES:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -208,7 +221,7 @@ all: Unnecessary_Violence
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-10 19:38:46
+#  Last modified 2022-05-11 14:14:26
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -218,7 +231,7 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 44):
+#  commands to execute (from `Makefile', line 47):
 	@rm -f $(NAME)
 	@echo "fclean Done."
 	
@@ -238,10 +251,16 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 40):
+#  commands to execute (from `Makefile', line 43):
 	@rm -f $(OBJ)
 	@echo "clean Done."
 	
+
+# Not a target:
+HumanA.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 main.o:
@@ -251,19 +270,19 @@ main.o:
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-Unnecessary_Violence: main.o
+Unnecessary_Violence: main.o Weapon.o HumanA.o HumanB.o
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 36):
+#  commands to execute (from `Makefile', line 39):
 	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 	@echo "$(bold)$(magenta)Combilation Done.$(ED)"
 	
 
 # files hash-table stats:
-# Load=9/1024=1%, Rehash=0, Collisions=0/27=0%
+# Load=12/1024=1%, Rehash=0, Collisions=0/33=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -275,6 +294,6 @@ Unnecessary_Violence: main.o
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue May 10 19:45:46 2022
+# Finished Make data base on Wed May 11 14:14:34 2022
 
  

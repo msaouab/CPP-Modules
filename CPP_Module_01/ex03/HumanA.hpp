@@ -5,31 +5,33 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 19:25:05 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/10 20:58:35 by msaouab          ###   ########.fr       */
+/*   Created: 2022/05/11 13:34:12 by msaouab           #+#    #+#             */
+/*   Updated: 2022/05/11 14:24:37 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HUMANA_HPP
 # define HUMANA_HPP
 
-/* Header */
+/* Includes */
 
-#include "./Weapon.hpp"
-#include "./HumanB.hpp"
+# include <iostream>
+# include <ostream>
+# include "./Weapon.hpp"
+# include "./HumanA.hpp"
+# include "./HumanB.hpp"
 
 /* Class */
 
-class HumanA
-{
+class HumanA {
 	private:
-		/* data */
+		Weapon		_club;
+		std::string	_name;
 	public:
-		Weapon	_Weapon;
-		HumanA(std::string str, Weapon club);
+		HumanA(std::string name, Weapon club);
 		HumanA();
 		~HumanA();
-		void	attack();
+		void	attack(void);
 };
 
 #endif
