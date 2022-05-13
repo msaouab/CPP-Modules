@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 19:03:01 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/10 14:28:35 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/13 19:25:43 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class	Zombie {
 		std::string	_name;
 	public:
 		Zombie();
-		Zombie(std::string _name);
 		~Zombie();
+		void kalwa(std::string _name);
 		void	announce();
 };
 

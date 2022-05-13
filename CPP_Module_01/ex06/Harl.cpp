@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 12:21:19 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/13 18:29:24 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/13 20:17:21 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	Harl::debug() {
 	std::cout << "I love having extra bacon for my 7XL-double-cheese";
 	std::cout << "-triple-pickle-special-ketchup burger. I really do!";
 	std::cout << std::endl << std::endl;
-	info();
 }
 void	Harl::info() {
 	std::cout << "[ INFO ]" << std::endl;
@@ -31,14 +30,12 @@ void	Harl::info() {
 	std::cout << ". You didn’t putenough bacon in my burger! If you did, ";
 	std::cout << "I wouldn’t be asking for more!";
 	std::cout << std::endl << std::endl;
-	warning();
 }
 void	Harl::warning() {
 	std::cout << "[ WARNING ]" << std::endl;
 	std::cout << "I think I deserve to have some extra bacon for free. I’ve been ";
 	std::cout << "coming foryears whereas you started working here since last month.";
 	std::cout << std::endl << std::endl;
-	error();
 }
 void	Harl::error() {
 	std::cout << "[ ERROR ]" << std::endl;
@@ -61,13 +58,10 @@ void	Harl::complain(std::string level) {
 	{
 		case 0:
 			debug();
-			break;
 		case 1:
 			info();
-			break;
 		case 2:
 			warning();
-			break;
 		case 3:
 			error();
 			break;

@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 13:34:10 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/11 17:13:39 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/13 19:44:51 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	HumanA::setWeapon(Weapon club) {
 	this->_club = club;
 }
 
-Weapon	HumanA::getWeapon() {
+Weapon	HumanA::getWeapon() const {
 	return (_club);
 }
 

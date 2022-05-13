@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 13:34:12 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/11 17:13:20 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/13 19:44:48 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class HumanA {
 		~HumanA();
 		void	attack(void);
 		void	setWeapon(Weapon club);
-		Weapon	getWeapon();
+		Weapon	getWeapon() const;
 };
 
 #endif

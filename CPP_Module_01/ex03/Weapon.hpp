@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 13:34:18 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/11 16:58:59 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/13 19:47:56 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Weapon {
 		Weapon();
 		~Weapon();
 		void		setType(std::string type);
-		std::string	getType(void);
+		std::string	getType(void) const ;
 };
 
 #endif
