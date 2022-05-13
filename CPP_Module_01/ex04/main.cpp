@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:51:23 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/12 21:06:09 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/13 12:06:40 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,11 @@ void    ft_errors(std::string msg)
 
 int main(int ac, char **av)
 {
-    std::ofstream    outfile;
-    std::ifstream    infile;
-	std::string line;
-	// std::string myfile = std::string(av[1]);
+    std::ofstream	outfile;
+    std::ifstream	infile;
+	std::string 	line;
 	int	i;
-	int	j;
+	size_t	j;
 
     if (ac != 4)
     {
@@ -35,31 +34,24 @@ int main(int ac, char **av)
     infile.open(av[1]);
 	std::string myfile = av[1] + std::string(".replace");
 	outfile.open(myfile);
-	// if (!outfile.is_open())
-	// {
-	// 	ft_errors("file Not Appened");
-	// 	exit(EXIT_FAILURE);
-	// }
 	if (infile.is_open())
 	{
 		i = 0;
 		while (getline(infile, line))
 		{
-			j = line.find(av[2]);
-			if (j != std::string::npos)
+			while ((j = line.find(av[2])) != std::string::npos)
 			{
 				line.erase(j, strlen(av[2]));
 				line.insert(j, av[3]);
-				outfile << "hi";
-				outfile << line << std::endl;
-				// outfile << line << std::endl;
-				// std::cout << ":333:" << line << std::endl;
 			}
-			i++;
+			outfile << line << std::endl;
 		}
 		infile.close();
 		outfile.close();
-		// std::cout << "here";
 	}
-    // read_file(fd);
+	else
+	{
+		ft_errors("file Not Appened");
+		exit(EXIT_FAILURE);
+	}
 }

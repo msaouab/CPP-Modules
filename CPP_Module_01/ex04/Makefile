@@ -6,21 +6,15 @@
 #    By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:28:16 by msaouab           #+#    #+#              #
-#    Updated: 2022/05/12 16:24:00 by msaouab          ###   ########.fr        #
+#    Updated: 2022/05/13 12:07:56 by msaouab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = losers
 
 SRC =	main.cpp\
-		# handel_file.cpp\
-		# Weapon.cpp\
-		HumanA.cpp\
-		HumanB.cpp\
 
 INCLUDE =	losers.hpp\
-			# HumanA.hpp\
-			HumanB.hpp\
 
 OBJ = $(SRC:.cpp=.o)
 
