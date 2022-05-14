@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 19:02:59 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/13 19:23:38 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/14 10:42:12 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ Zombie::Zombie(std::string _name)
 
 Zombie::~Zombie()
 {
+	std::cout << _name;
+	std::cout << ": Destroyed";
+	std::cout << std::endl;
 }
 
 Zombie::Zombie()

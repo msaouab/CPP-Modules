@@ -6,15 +6,13 @@
 #    By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:28:16 by msaouab           #+#    #+#              #
-#    Updated: 2022/05/10 14:49:09 by msaouab          ###   ########.fr        #
+#    Updated: 2022/05/14 11:03:57 by msaouab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = BRAIN
 
 SRC =	main.cpp\
-
-# INCLUDE = Zombie.hpp
 
 OBJ = $(SRC:.cpp=.o)
 

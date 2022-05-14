@@ -6,8 +6,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `all'.  Stop.
 
-# Make data base, printed on Fri May 13 19:30:17 2022
+
+# Make data base, printed on Sat May 14 11:03:59 2022
 
 # Variables
 
@@ -36,11 +39,11 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00007dm0001vd/T/vscode-ipc-87aea7f0-19d9-4dd0-9f23-3d0d15fc70bb.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00007dm0001vd/T/vscode-ipc-d841ea69-81b6-49b5-ab1c-fbdf45128327.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.ZADRBqLE7G/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.anzBCOXLId/Render
 # environment
 PATH = /Users/msaouab/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Library/Frameworks/Mono.framework/Versions/Current/Commands
 # environment
@@ -54,7 +57,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 LS_COLORS = di=34;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=31;40:cd=31;40:su=31;40:sg=31;40:tw=31;40:ow=31;40:
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.8qNQXDN0We/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.hTWSFumMzN/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -150,7 +153,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 7632
+VSCODE_PID = 51669
 # variable set hash-table stats:
 # Load=70/1024=7%, Rehash=0, Collisions=1/91=1%
 
@@ -234,8 +237,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Fri May 13 19:30:17 2022
+# Finished Make data base on Sat May 14 11:03:59 2022
 
  
-make: *** No rule to make target `all'.  Stop.
-
