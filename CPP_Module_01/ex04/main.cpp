@@ -6,12 +6,13 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:51:23 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/13 14:14:04 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/14 13:14:23 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./losers.hpp"
 #include <string>
+#include <iostream>
+#include <fstream>
 
 void    ft_errors(std::string msg)
 {
@@ -39,6 +40,7 @@ int main(int ac, char **av)
 		i = 0;
 		while (getline(infile, line))
 		{
+			j = 0;
 			while ((j = line.find(av[2], j)) != std::string::npos)
 			{
 				line.erase(j, strlen(av[2]));
