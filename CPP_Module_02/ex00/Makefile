@@ -6,16 +6,16 @@
 #    By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:28:16 by msaouab           #+#    #+#              #
-#    Updated: 2022/05/14 12:43:48 by msaouab          ###   ########.fr        #
+#    Updated: 2022/05/14 13:20:46 by msaouab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = FirstClass
 
 SRC =	main.cpp\
-		Harl.cpp\
+		Fixed.cpp\
 
-INCLUDE =	Harl.hpp\
+INCLUDE =	Fixed.hpp\
 
 OBJ = $(SRC:.cpp=.o)
 

@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Sat May 14 13:12:32 2022
+# Make data base, printed on Sun May 15 11:10:28 2022
 
 # Variables
 
@@ -39,13 +39,13 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00007dm0001vd/T/vscode-ipc-98f62669-e848-4b0c-bb55-c7076d3017ba.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00007dm0001vd/T/vscode-ipc-736c5ab0-80cc-4e52-b13a-cc6207cd2a7b.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.anzBCOXLId/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.1nJqAXQyel/Render
 # environment
-PATH = /Users/msaouab/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+PATH = /Users/msaouab/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/msaouab/.brew/bin
 # environment
 LSCOLORS = exfxcxdxbxbxbxbxbxbxbx
 # environment
@@ -57,7 +57,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 LS_COLORS = di=34;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=31;40:cd=31;40:su=31;40:sg=31;40:tw=31;40:ow=31;40:
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.hTWSFumMzN/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.dIL6FCRi2D/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -88,26 +88,34 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
 XPC_FLAGS = 0x0
+# environment
+COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
-# default
-MAKECMDGOALS := all
+# environment
+LC_TERMINAL = iTerm2
 # environment
 HOMEBREW_CACHE = /tmp/msaouab/Homebrew/Caches
 # environment
-SHLVL = 1
+SHLVL = 2
 # default
 MAKE_VERSION := 3.81
 # environment
 USER = msaouab
 # makefile
 .DEFAULT_GOAL := 
+# default
+MAKECMDGOALS := all
+# environment
+TERM_SESSION_ID = w0t0p0:C87CFF73-F496-44BD-9E1E-BAC25A718102
 # environment
 LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
+# environment
+TERM_PROGRAM = iTerm.app
 # default
 .VARIABLES := 
 # environment
@@ -123,25 +131,31 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000005.Electron
+TERM_PROGRAM_VERSION = 3.4.13
+# environment
+XPC_SERVICE_NAME = com.microsoft.VSCode.2352
+# environment
+LC_TERMINAL_VERSION = 3.4.13
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
-__CF_USER_TEXT_ENCODING = 0x76D:0x0:0x0
+ITERM_SESSION_ID = w0t0p0:C87CFF73-F496-44BD-9E1E-BAC25A718102
 # environment
-COMMAND_MODE = unix2003
+COLORFGBG = 15;0
+# environment
+__CF_USER_TEXT_ENCODING = 0x76D:0x0:0x0
 # default
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
 # environment
+ITERM_PROFILE = Default
+# environment
 PAGER = less
 # environment
 LC_ALL = C
-# environment
-SECURITYSESSIONID = 186a8
 # automatic
 ^F = $(notdir $^)
 # default
@@ -153,9 +167,11 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 51669
+TERM = xterm-256color
+# environment
+VSCODE_PID = 50132
 # variable set hash-table stats:
-# Load=70/1024=7%, Rehash=0, Collisions=1/91=1%
+# Load=78/1024=8%, Rehash=0, Collisions=4/99=4%
 
 # Pattern-specific Variable Values
 
@@ -237,6 +253,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Sat May 14 13:12:32 2022
+# Finished Make data base on Sun May 15 11:10:28 2022
 
  
