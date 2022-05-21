@@ -6,16 +6,19 @@
 #    By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:28:16 by msaouab           #+#    #+#              #
-#    Updated: 2022/05/16 17:16:22 by msaouab          ###   ########.fr        #
+#    Updated: 2022/05/20 10:43:07 by msaouab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fixed-point
+NAME = BSP
 
 SRC =	main.cpp\
 		Fixed.cpp\
+		Point.cpp\
+		bsp.cpp\
 
 INCLUDE =	Fixed.hpp\
+INCLUDE =	Point.hpp\
 
 OBJ = $(SRC:.cpp=.o)
 

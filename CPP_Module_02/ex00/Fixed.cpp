@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/14 13:25:10 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/14 19:14:36 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/15 16:05:00 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ Fixed::Fixed() {
 
 Fixed::Fixed(const Fixed &a) {
 	std::cout << "Copy constructor called" << std::endl;
-	if (this == &a)
-		return ;
 	*this = a;
 }
 

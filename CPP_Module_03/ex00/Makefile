@@ -6,16 +6,16 @@
 #    By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:28:16 by msaouab           #+#    #+#              #
-#    Updated: 2022/05/16 17:16:22 by msaouab          ###   ########.fr        #
+#    Updated: 2022/05/18 14:54:52 by msaouab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fixed-point
+NAME = Aaaaand...
 
 SRC =	main.cpp\
-		Fixed.cpp\
+		ClapTrap.cpp\
 
-INCLUDE =	Fixed.hpp\
+INCLUDE =	ClapTrap.hpp\
 
 OBJ = $(SRC:.cpp=.o)
 
