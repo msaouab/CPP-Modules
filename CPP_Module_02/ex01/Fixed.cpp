@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/14 13:25:10 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/16 17:10:05 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/27 15:51:41 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ Fixed::Fixed() {
 
 Fixed::Fixed(const int var) {
 	std::cout << "Int constructor called" << std::endl;
-	this->fixed_point = var * (1 << this->fract);
+	this->fixed_point = var * (1 << this->raw);
 }
 
 Fixed::Fixed(const float var) {
 	std::cout << "Float constructor called" << std::endl;
-	this->fixed_point = (int)(roundf(var * (1 << this->fract)));
+	this->fixed_point = (int)(roundf(var * (1 << this->raw)));
 }
 
 Fixed::Fixed(const Fixed &a) {
@@ -41,7 +41,7 @@ Fixed& Fixed::operator= (const Fixed& a) {
 	return (*this);
 }
 
-std::ostream& operator<<(std::ostream& os, const Fixed& fixed) {
+std::ostream& operator<< (std::ostream& os, const Fixed& fixed) {
 	os << fixed.toFloat();
 	return (os);
 }
@@ -59,9 +59,9 @@ Fixed::~Fixed() {
 }
 
 float	Fixed::toFloat(void) const {
-	return ((double)this->fixed_point / (double)(1 << this->fract));
+	return ((float)this->fixed_point / (float)(1 << this->raw));
 }
 
 int	Fixed::toInt(void) const {
-	return (this->fixed_point / (1 << this->fract));
+	return (this->fixed_point / (1 << this->raw));
 }

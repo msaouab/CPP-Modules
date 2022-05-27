@@ -6,16 +6,17 @@
 #    By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:28:16 by msaouab           #+#    #+#              #
-#    Updated: 2022/05/18 14:54:52 by msaouab          ###   ########.fr        #
+#    Updated: 2022/05/23 11:34:33 by msaouab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Aaaaand...
+NAME = ClapTrap
 
 SRC =	main.cpp\
 		ClapTrap.cpp\
 
 INCLUDE =	ClapTrap.hpp\
+			
 
 OBJ = $(SRC:.cpp=.o)
 

@@ -5,20 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 17:56:37 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/21 15:10:39 by msaouab          ###   ########.fr       */
+/*   Created: 2022/05/23 10:37:35 by msaouab           #+#    #+#             */
+/*   Updated: 2022/05/25 11:53:48 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include "./ScavTrap.hpp"
 #include "./FragTrap.hpp"
-
 int	main()
 {
-	FragTrap	Solder_n;
-	FragTrap	Solder("med");
+	FragTrap	solder("msaouab");
+	// FragTrap	Solder_;
 
-	Solder.attack("med");
-	Solder_n.takeDamage(50);
-	Solder.beRepaired(10);
-	Solder.highFivesGuys();
+	std::cout << "\n";
+	solder.attack("med");
+	solder.takeDamage(50);
+	solder.beRepaired(10);
+	solder.highFivesGuys();
+	std::cout << "\n";
 }

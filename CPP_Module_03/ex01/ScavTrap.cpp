@@ -5,52 +5,45 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/20 13:37:31 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/21 14:38:17 by msaouab          ###   ########.fr       */
+/*   Created: 2022/05/23 12:17:04 by msaouab           #+#    #+#             */
+/*   Updated: 2022/05/23 12:28:11 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./ScavTrap.hpp"
 
 ScavTrap::ScavTrap() {
-	std::cout << "\033[0;33m" << "ScavTrap Constructor called" << "\033[0m" << std::endl;
-	this->_name = "msaouab";
-	this->_hit = 100;
-	this->_energy = 50;
-	this->_attack = 20;
+	std::cout << "Default Constructor called\n";
 }
 
 ScavTrap::ScavTrap(std::string name) {
-	std::cout << "\033[0;33m" << "ScavTrap parametre Constructor called" << "\033[0m" << std::endl;
-	this->_name = "msaouab";
+	std::cout << "ScavTrap Constructor with parameter called\n";
+	this->_name = name;
 	this->_hit = 100;
 	this->_energy = 50;
 	this->_attack = 20;
-}
-
-ScavTrap& ScavTrap::operator= (ScavTrap const &a) {
-	std::cout << "ScavTrap Copy assignment called" << std::endl;
-	this->_name = "msaouab";
-	this->_hit = 100;
-	this->_energy = 50;
-	this->_attack = 20;
-	return (*this);
 }
 
 ScavTrap::ScavTrap(ScavTrap const &a) {
-	std::cout << "\033[0;33m" << "ScavTrap Copy Constructor called" << "\033[0m" << std::endl;
+	std::cout << "ScavTrap Copy Constructor called\n";
+	_name = a._name;
+	_hit = a._hit;
+	_energy = a._energy;
+	_attack = a._attack;
 }
 
-void	ScavTrap::attack(const std::string& target) {
-	std::cout << "ClapTrap " << this->_name <<  " attack " << target;
-	std::cout << ", causing " << this->_attack << " points of damage!";
-	std::cout << std::endl;
+ScavTrap& ScavTrap::operator= (const ScavTrap &a) {
+	this->_name = a._name;
+	this->_hit = a._hit;
+	this->_energy = a._energy;
+	this->_attack = a._attack;
+	return (*this);
 }
 
 void	ScavTrap::guardGate() {
-	std::cout << "ScavTrap is now in Gatekeeper mode." << std::endl;
+	std::cout << "ScavTrap in Gate Keeper mode now\n";
 }
 
 ScavTrap::~ScavTrap() {
-	std::cout << "\033[0;33m" << "ScavTrap Deconstructor called" << "\033[0m" << std::endl;
+	std::cout << "ScavTrap Deconstructor called\n";
 }

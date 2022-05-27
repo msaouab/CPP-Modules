@@ -6,11 +6,11 @@
 #    By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:28:16 by msaouab           #+#    #+#              #
-#    Updated: 2022/05/21 11:35:41 by msaouab          ###   ########.fr        #
+#    Updated: 2022/05/23 12:19:46 by msaouab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Serena
+NAME = ScavTrap
 
 SRC =	main.cpp\
 		ClapTrap.cpp\

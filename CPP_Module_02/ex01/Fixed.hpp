@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/15 11:33:34 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/16 16:59:19 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/26 12:08:03 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 class Fixed
 {
 	private:
-		static const int	fract = 8;
+		static const int	raw = 8;
 		int				fixed_point;
 	public:
 		Fixed(const Fixed &a);

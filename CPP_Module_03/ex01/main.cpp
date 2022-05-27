@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 17:56:37 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/21 14:33:07 by msaouab          ###   ########.fr       */
+/*   Created: 2022/05/23 10:37:35 by msaouab           #+#    #+#             */
+/*   Updated: 2022/05/23 12:27:11 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 int	main()
 {
-	ScavTrap	Solder_n;
-	ScavTrap	Solder("med");
+	ScavTrap	solder("msaouab");
 
-	Solder.attack("med");
-	Solder_n.takeDamage(50);
-	Solder.beRepaired(10);
-	Solder.guardGate();
+	solder.attack("med");
+	solder.takeDamage(50);
+	solder.beRepaired(10);
+	solder.guardGate();
 }

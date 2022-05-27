@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/14 13:25:19 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/14 19:08:18 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/26 12:09:40 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@
 class Fixed
 {
 	private:
-		static const int	fract;
+		static const int	raw = 8;
 		int					fixed_point;
 	public:
-		Fixed(const Fixed &a);
 		Fixed();
+		Fixed(const Fixed &a);
+		Fixed& operator= (const Fixed& a);
 		~Fixed();
 		void	setRawBits(int const raw);
 		int		getRawBits(void) const;
-		Fixed& operator= (const Fixed& a);
 };
 
 /* Functions */

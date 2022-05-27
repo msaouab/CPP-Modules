@@ -5,55 +5,62 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/21 14:52:21 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/21 18:24:55 by msaouab          ###   ########.fr       */
+/*   Created: 2022/05/23 12:34:17 by msaouab           #+#    #+#             */
+/*   Updated: 2022/05/25 11:53:38 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./FragTrap.hpp"
 
 FragTrap::FragTrap() {
-	std::cout << "\033[0;33m" << "FragTrap Constructor called" << "\033[0m" << std::endl;
-	this->_name = "msaouab";
-	this->_hit = 100;
-	this->_energy = 100;
-	this->_attack = 30;
+	std::cout << "FragTrap Default Constructor called\n";
 }
 
 FragTrap::FragTrap(std::string name) {
-	std::cout << "\033[0;33m" << "FragTrap parametre Constructor called" << "\033[0m" << std::endl;
-	this->_name = "msaouab";
-	this->_hit = 100;
-	this->_energy = 100;
-	this->_attack = 30;
-}
-
-FragTrap& FragTrap::operator= (FragTrap const &a) {
-	std::cout << "FragTrap Copy assignment called" << std::endl;
-	this->_name = "msaouab";
-	this->_hit = 100;
-	this->_energy = 100;
-	this->_attack = 30;
-	return (*this);
+	std::cout << "FragTrap Constructor with Parameter called\n";
 }
 
 FragTrap::FragTrap(FragTrap const &a) {
-	std::cout << "\033[0;33m" << "FragTrap Copy Constructor called" << "\033[0m" << std::endl;
-	if (this == &a)
-		return ;
-	*this = a;
+	std::cout << "FragTrap Copy Constructor called\n";
 }
 
-// void	FragTrap::attack(const std::string& target) {
-// 	std::cout << "ClapTrap " << this->_name <<  " attack " << target;
-// 	std::cout << ", causing " << this->_attack << " points of damage!";
-// 	std::cout << std::endl;
-// }
+FragTrap&	FragTrap::operator= (FragTrap const &a) {
+	this->_name = a._name;
+	this->_hit = a._hit;
+	this->_energy = a._energy;
+	this->_attack = a._attack;
+	return (*this);
+}
 
-void	FragTrap::highFivesGuys() {
-	std::cout << "FragTrap high fives request." << std::endl;
+void	FragTrap::setname(std::string name) {
+	this->_name = name;
+}
+void	FragTrap::sethit(int hit) {
+	_hit = hit;
+}
+void	FragTrap::setenergy(int energy) {
+	_energy = energy;
+}
+void	FragTrap::setattak(int attak) {
+	_attack = attak;
+}
+std::string	FragTrap::getname() {
+	return (_name);
+}
+int	FragTrap::gethit() {
+	return (_hit);
+}
+int	FragTrap::getenergy() {
+	return (_energy);
+}
+int	FragTrap::getattak() {
+	return (_attack);
+}
+
+void	FragTrap::highFivesGuys(void) {
+	std::cout << "FragTrap high fives reques\n";
 }
 
 FragTrap::~FragTrap() {
-	std::cout << "\033[0;33m" << "FragTrap Deconstructor called" << "\033[0m" << std::endl;
+	std::cout << "FragTrap Deconstructor called\n";
 }
