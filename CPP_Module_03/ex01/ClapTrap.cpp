@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 10:37:33 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/23 12:29:00 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/28 12:25:28 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,19 +41,19 @@ ClapTrap& ClapTrap::operator= (const ClapTrap &a) {
 }
 
 void	ClapTrap::attack(const std::string &target) {
-	std::cout << "ClapTrap " << this->_name <<  "attack " << target;
-	std::cout << ", causing " << this->_attack << "points of damage!";
+	std::cout << "ClapTrap " << this->_name << " attack " << target;
+	std::cout << ", causing " << this->_attack << " points of damage!";
 	std::cout << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount) {
-	std::cout << "ClapTrap " << this->_name << "take Amount " << amount;
-	std::cout << "points of damage!" << std::endl;
+	std::cout << "ClapTrap " << this->_name << " take Amount " << amount;
+	std::cout << " points of damage!" << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount) {
-	std::cout << "ClapTrap " << this->_name << "be repaired " << amount;
-	std::cout << "points of damage!" << std::endl;
+	std::cout << "ClapTrap " << this->_name << " be repaired " << amount;
+	std::cout << " points of damage!" << std::endl;
 }
 
 ClapTrap::~ClapTrap() {

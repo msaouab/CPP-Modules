@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 10:37:03 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/23 11:09:36 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/05/27 16:06:01 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string	_name;
 		int			_hit;
 		int			_energy;

@@ -6,8 +6,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `all'.  Stop.
 
-# Make data base, printed on Thu May 26 17:58:34 2022
+
+# Make data base, printed on Sat May 28 19:00:58 2022
 
 # Variables
 
@@ -36,11 +39,11 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00007dm0001vd/T/vscode-ipc-e9fa0be1-4396-444e-b20c-f4503438dc17.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00007dm0001vd/T/vscode-ipc-1e0f437d-1773-48a7-8fb4-df3fee7b8079.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.PLBiH9haUZ/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.Wgi90Jm3jm/Render
 # environment
 PATH = /Users/msaouab/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Library/Frameworks/Mono.framework/Versions/Current/Commands
 # environment
@@ -54,7 +57,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 LS_COLORS = di=34;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=31;40:cd=31;40:su=31;40:sg=31;40:tw=31;40:ow=31;40:
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.le0MDVvaaP/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.CIu9ZTYBR8/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -120,7 +123,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000002.Electron
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000004.Electron
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -135,6 +138,7 @@ MAKEFILES :=
 <F = $(notdir $<)
 # environment
 PAGER = less
+ 
 # environment
 LC_ALL = C
 # environment
@@ -150,7 +154,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 25084
+VSCODE_PID = 4742
 # variable set hash-table stats:
 # Load=70/1024=7%, Rehash=0, Collisions=1/91=1%
 
@@ -160,9 +164,9 @@ VSCODE_PID = 25084
 
 # Directories
 
-# . (device 16777227, inode 8086292): 7 files, no impossibilities.
+# . (device 16777227, inode 8086292): 8 files, no impossibilities.
 
-# 7 files, no impossibilities in 1 directories.
+# 8 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -234,8 +238,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Thu May 26 17:58:34 2022
+# Finished Make data base on Sat May 28 19:00:58 2022
 
  
-make: *** No rule to make target `all'.  Stop.
-

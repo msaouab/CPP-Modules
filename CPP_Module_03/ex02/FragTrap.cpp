@@ -5,26 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/23 12:34:17 by msaouab           #+#    #+#             */
-/*   Updated: 2022/05/25 11:53:38 by msaouab          ###   ########.fr       */
+/*   Created: 2022/05/23 12:17:04 by msaouab           #+#    #+#             */
+/*   Updated: 2022/05/28 12:21:19 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./FragTrap.hpp"
 
 FragTrap::FragTrap() {
-	std::cout << "FragTrap Default Constructor called\n";
+	std::cout << "Default Constructor called\n";
 }
 
 FragTrap::FragTrap(std::string name) {
-	std::cout << "FragTrap Constructor with Parameter called\n";
+	std::cout << "FragTrap Constructor with parameter called\n";
+	this->_name = name;
+	this->_hit = 100;
+	this->_energy = 50;
+	this->_attack = 20;
 }
 
 FragTrap::FragTrap(FragTrap const &a) {
 	std::cout << "FragTrap Copy Constructor called\n";
+	_name = a._name;
+	_hit = a._hit;
+	_energy = a._energy;
+	_attack = a._attack;
 }
 
-FragTrap&	FragTrap::operator= (FragTrap const &a) {
+FragTrap& FragTrap::operator= (const FragTrap &a) {
 	this->_name = a._name;
 	this->_hit = a._hit;
 	this->_energy = a._energy;
@@ -32,32 +40,7 @@ FragTrap&	FragTrap::operator= (FragTrap const &a) {
 	return (*this);
 }
 
-void	FragTrap::setname(std::string name) {
-	this->_name = name;
-}
-void	FragTrap::sethit(int hit) {
-	_hit = hit;
-}
-void	FragTrap::setenergy(int energy) {
-	_energy = energy;
-}
-void	FragTrap::setattak(int attak) {
-	_attack = attak;
-}
-std::string	FragTrap::getname() {
-	return (_name);
-}
-int	FragTrap::gethit() {
-	return (_hit);
-}
-int	FragTrap::getenergy() {
-	return (_energy);
-}
-int	FragTrap::getattak() {
-	return (_attack);
-}
-
-void	FragTrap::highFivesGuys(void) {
+void	FragTrap::highFivesGuys() {
 	std::cout << "FragTrap high fives reques\n";
 }
 
