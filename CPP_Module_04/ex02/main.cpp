@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 12:43:26 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/02 18:31:52 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/02 18:34:34 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,5 @@ int main()
     {
         Dog firstDog;
         secondDog = firstDog;
-    }
-
-    std::cout << "\n***** Copy Cat *****\n" << std::endl;
-
-    Cat secondCat;
-    {
-        Cat firstCat;
-        secondCat = firstCat;
     }
 }

@@ -1,45 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/29 14:59:42 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/02 14:52:32 by msaouab          ###   ########.fr       */
+/*   Created: 2022/05/29 20:39:42 by msaouab           #+#    #+#             */
+/*   Updated: 2022/05/30 13:21:36 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./Cat.hpp"
+#include "./WrongCat.hpp"
 
-Cat::Cat() {
-	std::cout << "Cat Default Constructor Called\n";
-	this->_type = "Cat";
+WrongCat::WrongCat() {
+	std::cout << "WrongCat Default Constructor Called\n";
+	this->_type = "WrongCat";
 }
 
-Cat& Cat::operator= (Cat const &a) {
-	std::cout << "Cat Assignement Operator Called\n";
+WrongCat::~WrongCat() {
+	std::cout << "WrongCat DeConstructor Called\n";
+}
+
+WrongCat& WrongCat::operator= (WrongCat const &a) {
+	std::cout << "WrongCat Assignement Operator Called\n";
 	this->_type = a._type;
 	return *this;
 }
 
-Cat::Cat(Cat const &a) {
-	std::cout << "Cat Copy Constructor Called\n";
+WrongCat::WrongCat(WrongCat const &a) {
+	std::cout << "WrongCat Copy Constructor Called\n";
 	this->_type = a._type;
 }
 
-void	Cat::setType(std::string type) {
+void	WrongCat::setType(std::string type) {
 	this->_type = type;
 }
 
-std::string	Cat::getType() const {
+std::string	WrongCat::getType() const {
 	return (_type);
 }
 
-Cat::~Cat() {
-	std::cout << "Cat DeConstructor Called\n";
-}
-
-void	Cat::makeSound() const {
+void	WrongCat::makeSound() const {
 	std::cout << "Meow Meow\n";
 }

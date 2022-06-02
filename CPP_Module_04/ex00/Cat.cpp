@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 14:59:42 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/02 14:52:32 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/01 12:56:48 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ std::string	Cat::getType() const {
 	return (_type);
 }
 
-Cat::~Cat() {
-	std::cout << "Cat DeConstructor Called\n";
-}
-
 void	Cat::makeSound() const {
 	std::cout << "Meow Meow\n";
+}
+
+Cat::~Cat() {
+	std::cout << "Cat DeConstructor Called\n";
 }
