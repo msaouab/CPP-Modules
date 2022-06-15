@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:04:09 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/14 15:43:48 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/15 12:01:44 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
-
+# include "./Form.hpp"
 #define heigh 150
 #define low 1
+
+class Form;
 
 class Bureaucrat
 {

@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:36:01 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/14 15:56:37 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/15 10:38:06 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,18 @@ Form::Form(Form const &a)
 Form::Form(std::string name, unsigned int sign, unsigned int execute)
 	: Name(name), _GradeSign(sign), _GradeExecute(execute) {
 	std::cout << "Form Constructor With Parameter Called\n";
-	// try {
-	// 	if (_GradeSign < low || _GradeExecute < low)
-	// 		throw GradeTooHighException("the Grades entred for Form " + Name + " is too High, the range between 1-150.");
-	// 	else if (_GradeSign < heigh || _GradeExecute < heigh)
-	// 		throw GradeTooLowException("the Grade entred for " + _name + " is too low,  the range between 1-150.");
-	// 	else
-	// 		this->_grade = grade;
-	// }
-	// catch (const std::exception &e) {
-	// 	std::cerr << "Bureacrate " + _name + " Constructor failed" << std::endl;
-	// 	throw;
-	// }
+	try {
+        if (_GradeSign < heigh || _GradeExecute < heigh)
+            throw GradeTooHighException("the Grades entred for Form " + Name + " is too High, the range between 1-150.");
+        else if (_GradeSign > low || _GradeExecute > low)
+            throw GradeTooLowException("the Grade entred for " + Name + " is too low, the range between 1-150.");
+        else
+            std::cout << "Form " + this->Name + " created" << std::endl;
+    }
+    catch (const std::exception &e) {
+        std::cout << "Form " + Name + " creation failed" << std::endl;
+        throw;
+    }
 }
 
 Form&	Form::operator= (Form const &a) {
