@@ -6,16 +6,18 @@
 #    By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:28:16 by msaouab           #+#    #+#              #
-#    Updated: 2022/06/03 18:38:57 by msaouab          ###   ########.fr        #
+#    Updated: 2022/06/14 13:29:33 by msaouab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Bureaucrat
+NAME = Form
 
 SRC =	main.cpp\
 		Bureaucrat.cpp\
+		Form.cpp\
 
 INCLUDE =	Bureaucrat.hpp\
+			Form.hpp\
 
 OBJ = $(SRC:.cpp=.o)
 

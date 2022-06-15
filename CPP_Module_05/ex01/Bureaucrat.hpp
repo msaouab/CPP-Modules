@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:04:09 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/05 11:01:30 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/14 15:43:48 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,28 +21,29 @@
 class Bureaucrat
 {
 	private:
-		const std::string	_name;
+		std::string	const	_name;
 		unsigned int		_grade;
 	public:
 		Bureaucrat();
-		Bureaucrat(std::string const name, unsigned int const grade);
 		Bureaucrat(Bureaucrat const &a);
+		Bureaucrat(std::string const name, unsigned int const grade);
 		Bureaucrat& operator= (const Bureaucrat &a);
 		~Bureaucrat();
 		std::string const	getName() const;
 		unsigned int const	getGrade() const;
 		void	incrementGrade();
 		void	decrementGade();
-		class GradeTooHighException : public std::exception
-		{
+		void	signForm(Form &a);
+
+		class GradeTooHighException : public std::exception {
 			public:
 				GradeTooHighException();
 				~GradeTooHighException() throw();
 
 				const char *what() const throw();
 		};
-		class GradeTooLowException : public std::exception
-		{
+
+		class GradeTooLowException : public std::exception {
 			public:
 				GradeTooLowException();
 				~GradeTooLowException() throw();

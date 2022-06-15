@@ -7,11 +7,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
  
-make: *** No rule to make target `all'
-.  Stop.
 
-
-# Make data base, printed on Tue Jun  7 16:03:42 2022
+# Make data base, printed on Wed Jun 15 08:08:18 2022
 
 # Variables
 
@@ -40,13 +37,13 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00007dm0001vd/T/vscode-ipc-c64f5007-a05d-47b9-80e0-c3a5835d167d.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00007dm0001vd/T/vscode-ipc-3076b462-3d5f-4653-b58d-a261c014f000.sock
 # environment
 VSCODE_CWD = /
 # environment
-PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
+PATH = /Users/msaouab/goinfre/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Users/msaouab/goinfre/.brew/bin
 # environment
-LSCOLORS = Gxfxcxdxbxegedabagacad
+LSCOLORS = exfxcxdxbxbxbxbxbxbxbx
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -54,7 +51,9 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.fBntnZslIr/Listeners
+LS_COLORS = di=34;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=31;40:cd=31;40:su=31;40:sg=31;40:tw=31;40:ow=31;40:
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.dxHGDKKUtT/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -74,7 +73,7 @@ VSCODE_CODE_CACHE_PATH = /Users/msaouab/Library/Application Support/Code/CachedD
 # environment
 LOGNAME = msaouab
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 ZSH = /Users/msaouab/.oh-my-zsh
 # environment
@@ -83,24 +82,32 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
 XPC_FLAGS = 0x0
+# environment
+COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
-# default
-MAKECMDGOALS := all
 # environment
-SHLVL = 1
+LC_TERMINAL = iTerm2
+# environment
+SHLVL = 2
 # default
 MAKE_VERSION := 3.81
 # environment
 USER = msaouab
 # makefile
 .DEFAULT_GOAL := 
+# default
+MAKECMDGOALS := all
+# environment
+TERM_SESSION_ID = w0t0p0:F6408A90-6F48-4873-9990-068697011A3F
 # environment
 LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
+# environment
+TERM_PROGRAM = iTerm.app
 # default
 .VARIABLES := 
 # environment
@@ -116,17 +123,29 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.2108
+TERM_PROGRAM_VERSION = 3.4.13
+# environment
+XPC_SERVICE_NAME = com.microsoft.VSCode.2116
+# environment
+LC_TERMINAL_VERSION = 3.4.13
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
+ITERM_SESSION_ID = w0t0p0:F6408A90-6F48-4873-9990-068697011A3F
+# environment
+COLORFGBG = 7;0
+# environment
 __CF_USER_TEXT_ENCODING = 0x76D:0x0:0x0
 # default
 MAKEFILES := 
+# environment
+HOMEBREW_NO_AUTO_UPDATE = 1
 # automatic
 <F = $(notdir $<)
+# environment
+ITERM_PROFILE = Default
 # environment
 PAGER = less
 # environment
@@ -142,9 +161,11 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1266
+TERM = xterm-256color
+# environment
+VSCODE_PID = 3173
 # variable set hash-table stats:
-# Load=64/1024=6%, Rehash=0, Collisions=1/85=1%
+# Load=76/1024=7%, Rehash=0, Collisions=4/97=4%
 
 # Pattern-specific Variable Values
 
@@ -152,9 +173,9 @@ VSCODE_PID = 1266
 
 # Directories
 
-# . (device 16777225, inode 24765): 4 files, no impossibilities.
+# . (device 16777225, inode 12550): 7 files, no impossibilities.
 
-# 4 files, no impossibilities in 1 directories.
+# 7 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -226,6 +247,8 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Tue Jun  7 16:03:42 2022
+# Finished Make data base on Wed Jun 15 08:08:18 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
