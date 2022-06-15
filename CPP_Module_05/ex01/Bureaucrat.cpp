@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:04:16 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/15 12:08:30 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/15 13:23:42 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,14 @@ Bureaucrat::~Bureaucrat() {
 }
 
 void	Bureaucrat::signForm(Form &a) {
-	
+	try {
+		a.beSigned(*this);
+		std::cout << this->_name << " sign " << a.getName() << "\n";
+	}
+	catch (const std::exception &e) {
+		std::cout << this->_name << " could not sign " << a.getName() << " because " << e.what() << ".\n";
+		throw;
+	}
 }
 
 std::ostream& operator<< (std::ostream& os, const Bureaucrat& a) {

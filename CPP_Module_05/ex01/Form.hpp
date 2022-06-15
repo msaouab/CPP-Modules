@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:35:53 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/14 15:51:15 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/15 13:41:39 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Form {
 	public:
 		Form();
 		Form(Form const &a);
-		Form(std::string name, unsigned int Sign, unsigned int Execute);
+		Form(std::string const &name, unsigned int const &Sign, unsigned int const &Execute);
 		Form& operator= (Form const &a);
 		~Form();
 		std::string	getName() const ;
@@ -39,20 +39,22 @@ class Form {
 		void	beSigned(Bureaucrat &a);
 
 		class GradeTooHighException : public std::exception {
-			std::string	errorMessage;
+			private:
+				std::string	errorMessage;
 			public:
-				GradeTooHighException();
-				GradeTooHighException(std::string error);
+				// GradeTooHighException();
+				GradeTooHighException(std::string const &error);
 				~GradeTooHighException() throw() ;
 
 				const char *what() const throw() ;
 		};
 
 		class GradeTooLowException : public std::exception {
-			std::string	errorMessage;
+			private:
+				std::string	errorMessage;
 			public:
-				GradeTooLowException();
-				GradeTooLowException(std::string error);
+				// GradeTooLowException();
+				GradeTooLowException(std::string const &error);
 				~GradeTooLowException() throw() ;
 
 				const char *what() const throw() ;

@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:04:21 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/15 12:06:56 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/15 13:39:50 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int main()
 {
     Bureaucrat Burcart("MED", 20);
-    Form form0("first", 25 , 25);
+    Form form0("first", 30 , 45);
     Form form1("seconde", 1, 1);
 
     try {

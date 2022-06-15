@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:36:01 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/15 10:38:06 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/15 13:45:40 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,19 @@ Form::Form(Form const &a)
 	std::cout << "Form Copy Constructor Called\n";
 }
 
-Form::Form(std::string name, unsigned int sign, unsigned int execute)
-	: Name(name), _GradeSign(sign), _GradeExecute(execute) {
+Form::Form(std::string const &name, unsigned int const &sign, unsigned int const &execute)
+	: Name(name), isSigned(false), _GradeSign(sign), _GradeExecute(execute) {
 	std::cout << "Form Constructor With Parameter Called\n";
 	try {
-        if (_GradeSign < heigh || _GradeExecute < heigh)
+        if (_GradeSign < low || _GradeExecute < low)
             throw GradeTooHighException("the Grades entred for Form " + Name + " is too High, the range between 1-150.");
-        else if (_GradeSign > low || _GradeExecute > low)
+        else if (_GradeSign > heigh || _GradeExecute > heigh)
             throw GradeTooLowException("the Grade entred for " + Name + " is too low, the range between 1-150.");
         else
             std::cout << "Form " + this->Name + " created" << std::endl;
     }
     catch (const std::exception &e) {
-        std::cout << "Form " + Name + " creation failed" << std::endl;
+        std::cout << "Form " + this->Name + " creation failed" << std::endl;
         throw;
     }
 }
@@ -71,16 +71,16 @@ void	Form::beSigned(Bureaucrat &a) {
     this->isSigned = true;
 }
 
-Form::GradeTooHighException::GradeTooHighException() {
-	std::cout << "GradeTooHighException Default Constructor Called\n";
-}
+// Form::GradeTooHighException::GradeTooHighException() {
+// 	std::cout << "GradeTooHighException Default Constructor Called\n";
+// }
 
-Form::GradeTooHighException::GradeTooHighException(std::string error) :errorMessage(error) {
+Form::GradeTooHighException::GradeTooHighException(std::string const &error) :errorMessage(error) {
 	
 }
 
 const char *Form::GradeTooHighException::what() const throw() {
-	return ("Form Grade too High, the range between 1 - 150.");
+	// return ("Form Grade too High, the range between 1 - 150.");
 	return (errorMessage.c_str());
 }
 
@@ -88,15 +88,15 @@ Form::GradeTooHighException::~GradeTooHighException() throw() {
 	std::cout << "GradeTooHighException Destructor Called\n";
 }
 
-Form::GradeTooLowException::GradeTooLowException() {
-	std::cout << "GradeTooLowException Default Constructor Called\n";
-}
+// Form::GradeTooLowException::GradeTooLowException() {
+// 	std::cout << "GradeTooLowException Default Constructor Called\n";
+// }
 
-Form::GradeTooLowException::GradeTooLowException(std::string error) :errorMessage(error) {
+Form::GradeTooLowException::GradeTooLowException(std::string const &error) :errorMessage(error) {
 }
 
 const char *Form::GradeTooLowException::what() const throw() {
-	return ("Form Grade is too low, the range between 1 - 150.");
+	// return ("Form Grade is too low, the range between 1 - 150.");
 	return (errorMessage.c_str());
 }
 
