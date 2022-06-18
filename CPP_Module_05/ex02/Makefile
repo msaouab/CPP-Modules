@@ -6,7 +6,7 @@
 #    By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:28:16 by msaouab           #+#    #+#              #
-#    Updated: 2022/06/14 13:29:33 by msaouab          ###   ########.fr        #
+#    Updated: 2022/06/18 14:03:31 by msaouab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,15 @@ NAME = Form
 SRC =	main.cpp\
 		Bureaucrat.cpp\
 		Form.cpp\
+		PresidentialPardonForm.cpp\
+		RobotomyRequestForm.cpp\
+		ShrubberyCreationForm.cpp\
 
 INCLUDE =	Bureaucrat.hpp\
 			Form.hpp\
+			RobotomyRequestForm.hpp\
+			ShrubberyCreationForm.hpp\
+			PresidentialPardonForm.hpp\
 
 OBJ = $(SRC:.cpp=.o)
 

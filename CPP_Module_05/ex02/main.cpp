@@ -6,40 +6,72 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:04:21 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/15 13:39:50 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/18 14:47:59 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./Bureaucrat.hpp"
 #include "./Form.hpp"
+#include "./PresidentialPardonForm.hpp"
+#include "./RobotomyRequestForm.hpp"
+#include "./ShrubberyCreationForm.hpp"
 
 int main()
 {
-    Bureaucrat Burcart("MED", 20);
-    Form form0("first", 30 , 45);
-    Form form1("seconde", 1, 1);
-
+    int n = 5;
+    Form *form[n];
+    for (int i = 0; i < n; i++) {
+        form[i] = nullptr;
+    }
     try {
-        std::cout << std::endl;
-        std::cout << "bureaucrat : " << Burcart << std::endl;
-        std::cout << "form0 : " << form0 << std::endl;
-        std::cout << "form1 : " << form1 << std::endl;
-        std::cout << std::endl;
+        Bureaucrat Burecrt("Med", 10);
 
-        std::cout << "******** "<< Burcart.getName() << " try to sign " << form0.getName() << "  ********"<< std::endl;
-        Burcart.signForm(form0);
+        form[0] = new PresidentialPardonForm("xavier");
+        form[1] = new RobotomyRequestForm("form");
+        form[2] = new ShrubberyCreationForm("home");
 
         std::cout << std::endl;
-        std::cout << "******** "<< Burcart.getName() << " try to sign " << form1.getName() << "  ********"<< std::endl;
-        Burcart.signForm(form1);
+        std::cout << "bureaucrat : " << Burecrt << std::endl;
+        std::cout << "form[0] : " << *form[0] << std::endl;
+        std::cout << "form[1] : " << *form[1] << std::endl;
+        std::cout << "form[2] : " << *form[1] << std::endl;
+        std::cout << std::endl;
+
+        std::cout << "->execute Forms" << std::endl;
+        std::cout << "******** " << Burecrt.getName() << " try to sign " << (*form[0]).getName() << "  ********" << std::endl;
+        Burecrt.signForm(*form[0]);
+
+        std::cout << std::endl;
+        std::cout << "******** " << Burecrt.getName() << " try to sign " << (*form[1]).getName() << "  ********" << std::endl;
+        Burecrt.signForm(*form[1]);
+
+        std::cout << std::endl;
+        std::cout << "******** " << Burecrt.getName() << " try to sign " << (*form[2]).getName() << "  ********" << std::endl;
+        Burecrt.signForm(*form[2]);
+
+        std::cout << std::endl
+                  << "->execute Forms" << std::endl;
+        std::cout << "******** " << Burecrt.getName() << " try to execute " << (*form[0]).getName() << "  ********" << std::endl;
+        Burecrt.executeForm(*form[0]);
+
+        std::cout << std::endl;
+        std::cout << "******** " << Burecrt.getName() << " try to execute " << (*form[1]).getName() << "  ********" << std::endl;
+        Burecrt.executeForm(*form[1]);
+
+        std::cout << std::endl;
+        std::cout << "******** " << Burecrt.getName() << " try to execute " << (*form[2]).getName() << "  ********" << std::endl;
+        Burecrt.executeForm(*form[2]);
+
+        for (int i = 0; i < n; i++) {
+            delete form[i];
+        }
     }
-    catch(const std::exception& e) {
-        std::cout << "main catch : " ;
+    catch (const std::exception &e) {
+        std::cout << "main catch : ";
         std::cout << e.what() << std::endl;
+        for (int i = 0; i < n; i++) {
+            delete form[i];
+        }
     }
-
-    std::cout << std::endl;
-    std::cout << "form0 : " << form0 << std::endl;
-    std::cout << "form1 : " << form1 << std::endl;
     return 0;
 }
