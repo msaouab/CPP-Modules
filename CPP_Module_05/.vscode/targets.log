@@ -6,9 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
 
-# Make data base, printed on Wed Jun 15 08:08:18 2022
+# Make data base, printed on Wed Jun 15 19:06:03 2022
 
 # Variables
 
@@ -37,7 +36,7 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00007dm0001vd/T/vscode-ipc-3076b462-3d5f-4653-b58d-a261c014f000.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00007dm0001vd/T/vscode-ipc-4ef827aa-97a8-4d13-8772-b2a178f57c9a.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -53,7 +52,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 LS_COLORS = di=34;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=31;40:cd=31;40:su=31;40:sg=31;40:tw=31;40:ow=31;40:
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.dxHGDKKUtT/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.ePmHk7xN7q/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -99,7 +98,7 @@ USER = msaouab
 # default
 MAKECMDGOALS := all
 # environment
-TERM_SESSION_ID = w0t0p0:F6408A90-6F48-4873-9990-068697011A3F
+TERM_SESSION_ID = w0t0p0:DA9D4026-A4EB-4773-9BC4-B6FB778EA2BF
 # environment
 LESS = -R
 # automatic
@@ -125,7 +124,7 @@ MFLAGS = -Rrqp
 # environment
 TERM_PROGRAM_VERSION = 3.4.13
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.2116
+XPC_SERVICE_NAME = com.microsoft.VSCode.2172
 # environment
 LC_TERMINAL_VERSION = 3.4.13
 # automatic
@@ -133,7 +132,7 @@ LC_TERMINAL_VERSION = 3.4.13
 # automatic
 +F = $(notdir $+)
 # environment
-ITERM_SESSION_ID = w0t0p0:F6408A90-6F48-4873-9990-068697011A3F
+ITERM_SESSION_ID = w0t0p0:DA9D4026-A4EB-4773-9BC4-B6FB778EA2BF
 # environment
 COLORFGBG = 7;0
 # environment
@@ -163,7 +162,7 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 3173
+VSCODE_PID = 1989
 # variable set hash-table stats:
 # Load=76/1024=7%, Rehash=0, Collisions=4/97=4%
 
@@ -247,7 +246,7 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Wed Jun 15 08:08:18 2022
+# Finished Make data base on Wed Jun 15 19:06:03 2022
 
  
 make: *** No rule to make target `all'.  Stop.
