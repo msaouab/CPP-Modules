@@ -24,7 +24,7 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /Users/msaouab/Desktop/42_Cursus/CPP-Modules/CPP_Module_05
+CURDIR := /Users/msaouab/Desktop/42_Cursus/CPP-Modules
 # makefile
 SHELL = /bin/sh
 # environment
@@ -36,7 +36,7 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00007dm0001vd/T/vscode-ipc-b20588d2-7b3a-4f7d-bf94-5d7cf99523bb.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00007dm0001vd/T/vscode-ipc-bcb172e7-1414-4827-9917-034f87a58472.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -60,7 +60,7 @@ SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.cJ1DhoylTO/Listeners
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /Users/msaouab/Desktop/42_Cursus/CPP-Modules/CPP_Module_05
+PWD = /Users/msaouab/Desktop/42_Cursus/CPP-Modules
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
@@ -158,9 +158,9 @@ VSCODE_PID = 1505
 
 # Directories
 
-# . (device 16777225, inode 12550): 7 files, no impossibilities.
+# . (device 16777225, inode 12295): 15 files, no impossibilities.
 
-# 7 files, no impossibilities in 1 directories.
+# 15 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 

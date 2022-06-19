@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:36:01 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/15 13:45:40 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/19 14:10:39 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,12 +71,31 @@ void	Form::beSigned(Bureaucrat &a) {
     this->isSigned = true;
 }
 
+Form::FormNotSigned::FormNotSigned(std::string const &errorMessage) : _errorMessage(errorMessage) {
+	//std::cout << "Form not Signed constructor called " << std::endl;
+}
+
+const char *Form::FormNotSigned::what() const throw() {
+	return (_errorMessage.c_str());
+}
+
+Form::FormNotSigned::~FormNotSigned() throw() {
+	//std::cout << "GradeTooLowException destructor called " << std::endl;
+}
+
+void Form::execute(Bureaucrat const &a) const {
+	if (!this->isSigned)
+		throw FormNotSigned("the Form " + this->Name + " not signed");
+	if (a.getGrade() >= this->getGradesign())
+		throw GradeTooLowException(a.getName() + " grade is too low to sign " + Name);
+	this->action();
+}
+
 // Form::GradeTooHighException::GradeTooHighException() {
 // 	std::cout << "GradeTooHighException Default Constructor Called\n";
 // }
 
 Form::GradeTooHighException::GradeTooHighException(std::string const &error) :errorMessage(error) {
-	
 }
 
 const char *Form::GradeTooHighException::what() const throw() {
