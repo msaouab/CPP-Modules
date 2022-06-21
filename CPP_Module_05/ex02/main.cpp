@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:04:21 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/18 14:47:59 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/21 17:23:54 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ int main()
     try {
         Bureaucrat Burecrt("Med", 10);
 
-        form[0] = new PresidentialPardonForm("xavier");
-        form[1] = new RobotomyRequestForm("form");
+        form[0] = new PresidentialPardonForm("ilyas");
+        form[1] = new RobotomyRequestForm("issam");
         form[2] = new ShrubberyCreationForm("home");
 
         std::cout << std::endl;

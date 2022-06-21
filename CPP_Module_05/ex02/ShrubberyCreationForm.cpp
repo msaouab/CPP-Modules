@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 19:14:44 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/19 16:25:10 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/21 17:17:21 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,50 +29,34 @@ ShrubberyCreationForm::~ShrubberyCreationForm() {
 	std::cout << "ShrubberyCreationForm Destructor Called\n";
 }
 
+const char* ShrubberyCreationForm::FileCannotCreate::what() const throw()
+{
+	return ("ShrubberyCreationFormException: A Problem Happened While Creating The File");
+}
+
 void	ShrubberyCreationForm::action() const {
-	std::ofstream file;
+	std::ofstream TreeFile;
 
-	file.open(_target + "_shrubbery");
+	TreeFile.open(_Target + "_shrubbery");
 
-    if (file.good())
-    {
-		file << "		        _{\ _{\{\/}/}/}__				\n";
-		file << "             {/{/\}{/{/\}(\}{/\} _				\n";
-		file << "            {/{/\}{/{/\}(_)\}{/{/\}  _			\n";
-		file << "         {\{/(\}\}{/{/\}\}{/){/\}\} /\}		\n";
-		file << "        {/{/(_)/}{\{/)\}{\(_){/}/}/}/}			\n";
-		file << "       _{\{/{/{\{/{/(_)/}/}/}{\(/}/}/}			\n";
-		file << "      {/{/{\{\{\(/}{\{\/}/}{\}(_){\/}\}		\n";
-		file << "      _{\{/{\{/(_)\}/}{/{/{/\}\})\}{/\}		\n";
-		file << "     {/{/{\{\(/}{/{\{\{\/})/}{\(_)/}/}\}		\n";
-		file << "      {\{\/}(_){\{\{\/}/}(_){\/}{\/}/})/}		\n";
-		file << "       {/{\{\/}{/{\{\{\/}/}{\{\/}/}\}(_)		\n";
-		file << "      {/{\{\/}{/){\{\{\/}/}{\{\(/}/}\}/}		\n";
-		file << "       {/{\{\/}(_){\{\{\(/}/}{\(_)/}/}\}		\n";
-		file << "         {/({/{\{/{\{\/}(_){\/}/}\}/}(\}		\n";
-		file << "          (_){/{\/}{\{\/}/}{\{\)/}/}(_)		\n";
-		file << "            {/{/{\{\/}{/{\{\{\(_)/}			\n";
-		file << "             {/{\{\{\/}/}{\{\\}/}				\n";
-		file << "              {){/ {\/}{\/} \}\}				\n";
-		file << "              (_)  \.-'.-/						\n";
-		file << "          __...--- |'-.-'| --...__				\n";
-		file << "   _...--"   .-'   |'-.-'|  ' -.  ""--..__		\n";
-		file << " -"    ' .  . '    |.'-._| '  . .  '   jro		\n";
-		file << " .  '-  '    .--'  | '-.'|    .  '  . '		\n";
-		file << "          ' ..     |'-_.-|						\n";
-		file << "  .  '  .       _.-|-._ -|-._  .  '  .			\n";
-		file << "              .'   |'- .-|   '.				\n";
-		file << "  ..-'   ' .  '.   `-._.-�   .'  '  - .		\n";
-		file << "   .-' '        '-._______.-'     '  .			\n";
-		file << "        .      ~,								\n";
-		file << "    .       .   |\   .    ' '-.				\n";
-		file << "    ___________/  \____________				\n";
-		file << "   /  Practice, & Practice, &  \				\n";
-		file << "  |     Practice, makes what    |				\n";
-		file << "  |       makes improvement     |				\n";
-		file << "  |    'Med Saouab' 'msaouab'   |				\n";
-		file << "   \___________________________/				\n";
-        file.close();
-        std::cout << _target + "_shrubbery file created" << std::endl;
-    }
+    if (!TreeFile.is_open() || TreeFile.bad())
+		throw ShrubberyCreationForm::FileCannotCreate();
+	TreeFile << "          .     .  .      #     .      .          .		\n";
+	TreeFile << "     .       .      .     #       .           .			\n";
+	TreeFile << "        .      .         ###            .      .      .	\n";
+	TreeFile << "      .      .   '#:. .:##'##:. .:#'  .      .				\n";
+	TreeFile << "          .      . '####'###'####'  .						\n";
+	TreeFile << "       .     '#:.    .:#'###'#:.    .:#'  .        .      .\n";
+	TreeFile << "  .             '#########'#########'        .        .	\n";
+	TreeFile << "        .    '#:.  '####'###'####'  .:#'   .       .		\n";
+	TreeFile << "     .     .  '#######''##'##''#######'                  .	\n";
+	TreeFile << "                .'##'#####'#####'##'           .      .	\n";
+	TreeFile << "    .   '#:. ...  .:##'###'###'##:.  ... .:#'     .		\n";
+	TreeFile << "      .     '#######'##'#####'##'#######'      .     .		\n";
+	TreeFile << "    .    .     '#####''#######''#####'    .      .			\n";
+	TreeFile << "            .     '      000      '    .     .				\n";
+	TreeFile << "       .         .   .   000     .        .       .		\n";
+	TreeFile << ".. .. ..................O000O........................ .....\n";
+	TreeFile << "		       msaouab								\n";
+	std::cout << _Target + "_shrubbery outfile created" << std::endl;
 }
