@@ -1,0 +1,9 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/msaouab/Desktop/42Cursus/CPP-Modules/CPP_Module_01/ex04'
+c++    -c -o main.o main.cpp
+clang++ -std=c++98 -Wall -Wextra -Werror main.o -o losers
+echo "`tput setaf 5`Combilation Done.\033[0m"
+make: Leaving directory `/Users/msaouab/Desktop/42Cursus/CPP-Modules/CPP_Module_01/ex04'
+ 
+tput: No value for $TERM and no -T specified
+
