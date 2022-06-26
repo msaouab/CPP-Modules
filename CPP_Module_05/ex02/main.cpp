@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:04:21 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/21 17:23:54 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/26 20:38:17 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
 int main()
 {
     int n = 5;
-    Form *form[n];
-    for (int i = 0; i < n; i++) {
-        form[i] = nullptr;
-    }
     try {
+        Form *form[n];
+        for (int i = 0; i < n; i++) {
+            form[i] = nullptr;
+        }
         Bureaucrat Burecrt("Med", 10);
 
         form[0] = new PresidentialPardonForm("ilyas");

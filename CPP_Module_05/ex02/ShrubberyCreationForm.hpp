@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 19:09:37 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/21 17:15:28 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/26 20:40:10 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,7 @@ class ShrubberyCreationForm : public Form
 		ShrubberyCreationForm& operator= (ShrubberyCreationForm const &a);
 		~ShrubberyCreationForm();
 
-		class FileCannotCreate : public std::exception
-		{
+		class FileCannotCreate : public std::exception {
 			const char *what() const throw() ;
 		};
 		

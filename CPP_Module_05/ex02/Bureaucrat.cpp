@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:04:16 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/19 15:56:37 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/26 17:13:26 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ Bureaucrat::Bureaucrat(std::string const name, unsigned int const grade) : _name
 	std::cout << "Bureaucrat Constructor With Parameter Called\n";
 	try {
 		if (grade < low)
-			throw GradeTooHighException();
-		else if (grade > heigh)
 			throw GradeTooLowException();
+		else if (grade > heigh)
+			throw GradeTooHighException();
 		else
 			this->_grade = grade;
 	}
