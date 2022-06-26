@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:36:01 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/15 13:45:40 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/26 17:45:22 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ Form::Form(std::string const &name, unsigned int const &sign, unsigned int const
 	std::cout << "Form Constructor With Parameter Called\n";
 	try {
         if (_GradeSign < low || _GradeExecute < low)
-            throw GradeTooHighException("the Grades entred for Form " + Name + " is too High, the range between 1-150.");
+            throw Form::GradeTooHighException();
         else if (_GradeSign > heigh || _GradeExecute > heigh)
-            throw GradeTooLowException("the Grade entred for " + Name + " is too low, the range between 1-150.");
+            throw Form::GradeTooLowException();
         else
             std::cout << "Form " + this->Name + " created" << std::endl;
     }
@@ -67,41 +67,16 @@ unsigned int	Form::getGradeExecute() const {
 
 void	Form::beSigned(Bureaucrat &a) {
 	if (this->_GradeSign < a.getGrade())
-        throw GradeTooLowException("Bureaucrat grade is too low to sign the form");
+        throw Form::GradeTooHighException();
     this->isSigned = true;
 }
 
-// Form::GradeTooHighException::GradeTooHighException() {
-// 	std::cout << "GradeTooHighException Default Constructor Called\n";
-// }
-
-Form::GradeTooHighException::GradeTooHighException(std::string const &error) :errorMessage(error) {
-	
-}
-
 const char *Form::GradeTooHighException::what() const throw() {
-	// return ("Form Grade too High, the range between 1 - 150.");
-	return (errorMessage.c_str());
-}
-
-Form::GradeTooHighException::~GradeTooHighException() throw() {
-	std::cout << "GradeTooHighException Destructor Called\n";
-}
-
-// Form::GradeTooLowException::GradeTooLowException() {
-// 	std::cout << "GradeTooLowException Default Constructor Called\n";
-// }
-
-Form::GradeTooLowException::GradeTooLowException(std::string const &error) :errorMessage(error) {
+	return ("Bureaucrat grade is too high to sign the form");
 }
 
 const char *Form::GradeTooLowException::what() const throw() {
-	// return ("Form Grade is too low, the range between 1 - 150.");
-	return (errorMessage.c_str());
-}
-
-Form::GradeTooLowException::~GradeTooLowException() throw() {
-	std::cout << "GradeTooLowException Destructor Called\n";
+	return ("Bureaucrat grade is too low to sign the form");
 }
 
 std::ostream& operator<< (std::ostream& os, const Form& a) {
