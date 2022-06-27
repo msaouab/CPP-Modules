@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:04:21 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/26 17:47:29 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/26 20:31:11 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main()
 
     try {
         Bureaucrat Burcart("Zero", 20);
-        Form form0("First", 100 , 125);
+        Form form0("First", 200 , 125);
         Form form1("Seconde", 10, 110);
         std::cout << std::endl;
         std::cout << "bureaucrat : " << Burcart << std::endl;

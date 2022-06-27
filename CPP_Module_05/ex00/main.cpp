@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:04:21 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/05 11:09:52 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/27 14:05:00 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,5 @@ int	main()
 	catch(const std::exception& e) {
 		std::cerr << e.what() << "\n\n";
 	}
-
 	return 0;
 }

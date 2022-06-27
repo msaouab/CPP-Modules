@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 19:11:05 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/19 12:16:05 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/27 13:12:18 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ PresidentialPardonForm::~PresidentialPardonForm() {
 }
 
 void	PresidentialPardonForm::action() const {
-	std::cout << this->_Target << "has been pardoned by med\n";
+	std::cout << this->_Target << " has been pardoned by med\n";
 }

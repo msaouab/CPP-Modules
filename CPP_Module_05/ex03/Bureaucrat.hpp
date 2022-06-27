@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:04:09 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/19 15:53:03 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/27 18:07:00 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,19 +39,11 @@ class Bureaucrat
 		void	executeForm(Form const & form);
 	
 		class GradeTooHighException : public std::exception {
-			public:
-				GradeTooHighException();
-				~GradeTooHighException() throw();
-
-				const char *what() const throw();
+			const char *what() const throw();
 		};
 
 		class GradeTooLowException : public std::exception {
-			public:
-				GradeTooLowException();
-				~GradeTooLowException() throw();
-
-				const char *what() const throw();
+			const char *what() const throw();
 		};
 };
 

@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 19:58:14 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/21 20:21:33 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/27 18:09:06 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ class Intern
 		~Intern();
 		Form	*makeForm(std::string const &name, std::string const &target);
 
-		class FormNotFound : public std::exception
-		{
+		class FormNotFound : public std::exception {
 			virtual const	char *what() const throw();
 		};
 

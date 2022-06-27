@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:04:09 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/05 11:01:30 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/27 14:06:44 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,21 +33,12 @@ class Bureaucrat
 		unsigned int const	getGrade() const;
 		void	incrementGrade();
 		void	decrementGade();
-		class GradeTooHighException : public std::exception
-		{
-			public:
-				GradeTooHighException();
-				~GradeTooHighException() throw();
 
-				const char *what() const throw();
+		class GradeTooHighException : public std::exception {
+			virtual const char *what() const throw();
 		};
-		class GradeTooLowException : public std::exception
-		{
-			public:
-				GradeTooLowException();
-				~GradeTooLowException() throw();
-
-				const char *what() const throw();
+		class GradeTooLowException : public std::exception {
+			virtual const char *what() const throw();
 		};
 };
 

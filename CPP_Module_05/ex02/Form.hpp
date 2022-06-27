@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:35:53 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/26 20:45:58 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/27 12:59:55 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ class Form {
 			private:
 				std::string	errorMessage;
 			public:
-				// GradeTooHighException();
+				GradeTooHighException();
 				GradeTooHighException(std::string const &error);
 				~GradeTooHighException() throw() ;
 
@@ -55,7 +55,7 @@ class Form {
 			private:
 				std::string	errorMessage;
 			public:
-				// GradeTooLowException();
+				GradeTooLowException();
 				GradeTooLowException(std::string const &error);
 				~GradeTooLowException() throw() ;
 
@@ -66,6 +66,7 @@ class Form {
     		private:
 				std::string _errorMessage;
 			public:
+				FormNotSigned();
 				FormNotSigned(std::string const &errorMessage);
 				~FormNotSigned() throw();
 

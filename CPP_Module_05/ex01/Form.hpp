@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:35:53 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/26 17:42:26 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/27 14:06:54 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,23 +39,11 @@ class Form {
 		void	beSigned(Bureaucrat &a);
 
 		class GradeTooHighException : public std::exception {
-			// private:
-			// 	std::string	errorMessage;
-			// public:
-			// 	GradeTooHighException(std::string const &error);
-			// 	~GradeTooHighException() throw() ;
-
-				const char *what() const throw() ;
+			virtual const char *what() const throw() ;
 		};
 
 		class GradeTooLowException : public std::exception {
-			// private:
-			// 	std::string	errorMessage;
-			// public:
-			// 	GradeTooLowException(std::string const &error);
-			// 	~GradeTooLowException() throw() ;
-
-				const char *what() const throw() ;
+			virtual const char *what() const throw() ;
 		};
 };
 

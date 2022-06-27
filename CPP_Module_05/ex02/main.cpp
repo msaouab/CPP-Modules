@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:04:21 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/26 20:38:17 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/27 13:51:16 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@
 int main()
 {
     int n = 5;
+    Form *form[n];
+    for (int i = 0; i < n; i++) {
+        form[i] = nullptr;
+    }
     try {
-        Form *form[n];
-        for (int i = 0; i < n; i++) {
-            form[i] = nullptr;
-        }
-        Bureaucrat Burecrt("Med", 10);
+        Bureaucrat Burecrt("Med", -1);
 
         form[0] = new PresidentialPardonForm("ilyas");
         form[1] = new RobotomyRequestForm("issam");
@@ -62,16 +62,13 @@ int main()
         std::cout << "******** " << Burecrt.getName() << " try to execute " << (*form[2]).getName() << "  ********" << std::endl;
         Burecrt.executeForm(*form[2]);
 
-        for (int i = 0; i < n; i++) {
-            delete form[i];
-        }
     }
     catch (const std::exception &e) {
         std::cout << "main catch : ";
         std::cout << e.what() << std::endl;
+    }
         for (int i = 0; i < n; i++) {
             delete form[i];
         }
-    }
     return 0;
 }
