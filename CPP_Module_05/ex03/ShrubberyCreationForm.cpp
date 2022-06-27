@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 19:14:44 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/21 17:17:21 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/27 19:31:37 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,6 @@ void	ShrubberyCreationForm::action() const {
 	TreeFile << "            .     '      000      '    .     .				\n";
 	TreeFile << "       .         .   .   000     .        .       .		\n";
 	TreeFile << ".. .. ..................O000O........................ .....\n";
-	TreeFile << "		       msaouab								\n";
+	TreeFile << "		 Created by: msaouab								\n";
 	std::cout << _Target + "_shrubbery outfile created" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:36:01 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/19 14:10:39 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/27 19:34:04 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,6 @@ void	Form::beSigned(Bureaucrat &a) {
 }
 
 Form::FormNotSigned::FormNotSigned(std::string const &errorMessage) : _errorMessage(errorMessage) {
-	//std::cout << "Form not Signed constructor called " << std::endl;
 }
 
 const char *Form::FormNotSigned::what() const throw() {
@@ -80,7 +79,6 @@ const char *Form::FormNotSigned::what() const throw() {
 }
 
 Form::FormNotSigned::~FormNotSigned() throw() {
-	//std::cout << "GradeTooLowException destructor called " << std::endl;
 }
 
 void Form::execute(Bureaucrat const &a) const {
@@ -91,15 +89,10 @@ void Form::execute(Bureaucrat const &a) const {
 	this->action();
 }
 
-// Form::GradeTooHighException::GradeTooHighException() {
-// 	std::cout << "GradeTooHighException Default Constructor Called\n";
-// }
-
 Form::GradeTooHighException::GradeTooHighException(std::string const &error) :errorMessage(error) {
 }
 
 const char *Form::GradeTooHighException::what() const throw() {
-	// return ("Form Grade too High, the range between 1 - 150.");
 	return (errorMessage.c_str());
 }
 
@@ -107,15 +100,10 @@ Form::GradeTooHighException::~GradeTooHighException() throw() {
 	std::cout << "GradeTooHighException Destructor Called\n";
 }
 
-// Form::GradeTooLowException::GradeTooLowException() {
-// 	std::cout << "GradeTooLowException Default Constructor Called\n";
-// }
-
 Form::GradeTooLowException::GradeTooLowException(std::string const &error) :errorMessage(error) {
 }
 
 const char *Form::GradeTooLowException::what() const throw() {
-	// return ("Form Grade is too low, the range between 1 - 150.");
 	return (errorMessage.c_str());
 }
 

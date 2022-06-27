@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:04:16 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/26 20:34:47 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/27 19:58:36 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,12 @@ Bureaucrat& Bureaucrat::operator= (const Bureaucrat &a) {
 
 Bureaucrat::Bureaucrat(std::string const name, unsigned int const grade) : _name(name) {
 	std::cout << "Bureaucrat Constructor With Parameter Called\n";
-	try {
-		if (grade < low)
-			throw GradeTooLowException();
-		else if (grade > heigh)
-			throw GradeTooHighException();
-		else
-			this->_grade = grade;
-	}
-	catch (const std::exception &e) {
-		std::cerr << "Bureacrate " + _name + " Constructor failed" << std::endl;
-		throw;
-	}
+	if (grade < low)
+		throw GradeTooLowException();
+	else if (grade > heigh)
+		throw GradeTooHighException();
+	else
+		this->_grade = grade;
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw() {

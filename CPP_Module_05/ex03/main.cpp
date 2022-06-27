@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:04:21 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/21 17:23:54 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/27 21:32:13 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main()
         form[i] = nullptr;
     }
     try {
-        Bureaucrat Burecrt("Med", 10);
+        Bureaucrat Burecrt("Med", 100);
 
         form[0] = new PresidentialPardonForm("ilyas");
         form[1] = new RobotomyRequestForm("issam");

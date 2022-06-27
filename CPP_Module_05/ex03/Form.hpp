@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:35:53 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/19 16:10:18 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/27 19:33:03 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ class Form {
 			private:
 				std::string	errorMessage;
 			public:
-				// GradeTooLowException();
 				GradeTooLowException(std::string const &error);
 				~GradeTooLowException() throw() ;
 
