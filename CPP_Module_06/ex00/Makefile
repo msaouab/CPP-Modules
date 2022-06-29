@@ -6,7 +6,7 @@
 #    By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:28:16 by msaouab           #+#    #+#              #
-#    Updated: 2022/06/21 20:47:26 by msaouab          ###   ########.fr        #
+#    Updated: 2022/06/28 17:09:38 by msaouab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ INCLUDE =	Conversion.hpp\
 
 OBJ = $(SRC:.cpp=.o)
 
-CC = clang++ -std=c++98
+CC = c++ -std=c++98
 
 CFLAGS = -Wall -Wextra -Werror
 
