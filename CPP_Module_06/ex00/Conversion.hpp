@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 20:47:43 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/29 13:40:34 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/07/02 13:51:14 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,21 @@
 #define  CONVERSION_HPP
 
 # include <iostream>
+# include <iomanip>
+
+# define true 1
+# define false 0
 
 class Conversion
 {
 	private:
-		char	c;
-		int		i;
-		float	f;
-		double	d;
+		std::string	_str;
+		std::string	_type;
+		bool		p_int;
+		char		_char;
+		int			_int;
+		float		_flt;
+		double		_dbl;
 	public:
 		Conversion();
 		Conversion(Conversion const &a);
@@ -29,17 +36,25 @@ class Conversion
 		Conversion& operator= (Conversion const &a);
 		~Conversion();
 
-		char	getChar(void) const ;
-		int		getInt(void) const ;
-		float	getFloat(void) const ;
-		double	getDouble(void) const ;
+		void	getType();
+		bool	checkChar();
+		bool	checkInt();
+		bool	checkFloat();
+		bool	checkDouble();
 
-		void	to_Char(char c);
-		void	to_Int(int	num);
-		void	to_Float(float flt);
-		void	to_Double(double dbl);
+		void	cast();
 
-		std::string	CheckStr(std::string str);
+		void	to_Char();
+		void	to_Int();
+		void	to_Float();
+		void	to_Double();
+
+		void	printData();
+
+		void	printChar();
+		void	printInt();
+		void	printFlt();
+		void	printDbl();
 };
 
 #endif
