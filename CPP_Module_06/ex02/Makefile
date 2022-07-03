@@ -6,20 +6,20 @@
 #    By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:28:16 by msaouab           #+#    #+#              #
-#    Updated: 2022/06/03 18:38:57 by msaouab          ###   ########.fr        #
+#    Updated: 2022/07/03 16:29:06 by msaouab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Bureaucrat
+NAME = Base
 
 SRC =	main.cpp\
-		Bureaucrat.cpp\
+		Base.cpp\
 
-INCLUDE =	Bureaucrat.hpp\
+INCLUDE =	Base.hpp\
 
 OBJ = $(SRC:.cpp=.o)
 
-CC = clang++ -std=c++98
+CC = c++ -std=c++98
 
 CFLAGS = -Wall -Wextra -Werror
 
