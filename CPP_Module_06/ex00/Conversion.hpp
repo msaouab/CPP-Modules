@@ -6,15 +6,15 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 20:47:43 by msaouab           #+#    #+#             */
-/*   Updated: 2022/07/02 13:51:14 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/07/02 14:08:11 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONVERSION_HPP
 #define  CONVERSION_HPP
 
-# include <iostream>
-# include <iomanip>
+# include <iostream>	// std::cout, std::fixed
+# include <iomanip>		// std::setprecision
 
 # define true 1
 # define false 0

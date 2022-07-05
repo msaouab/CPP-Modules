@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:22:42 by msaouab           #+#    #+#             */
-/*   Updated: 2022/07/03 13:42:34 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/07/03 16:07:53 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 typedef struct t_Data
 {
 	int		count;
-	int		CheckData;
+	int		Serial;
 }	Data;
 
 
@@ -31,20 +31,19 @@ Data* deserialize(uintptr_t raw)
 
 int main()
 {
-
     Data data;
 
     data.count = 42;
-    data.CheckData = 21;
+    data.Serial = 21;
 
-    std::cout << " data.count : " << data.count << std::endl;
-    std::cout << " data.data : " << data.CheckData << std::endl;
+    std::cout << "counter : " << data.count << std::endl;
+    std::cout << "Data Serial : " << data.Serial << std::endl;
 
     uintptr_t rawBits = serialize(&data);
     Data *returnedData = deserialize(rawBits);
-    std::cout << " data.count : " << returnedData->count << std::endl;
-    std::cout << " data.data : " << returnedData->CheckData <<std::endl;
 
+    std::cout << "counter : " << returnedData->count << std::endl;
+    std::cout << "Data Serial : " << returnedData->Serial <<std::endl;
 
-    return 0;
+    return (0);
 }

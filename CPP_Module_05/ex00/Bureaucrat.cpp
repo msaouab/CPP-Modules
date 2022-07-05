@@ -6,7 +6,7 @@
 /*   By: msaouab <msaouab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:04:16 by msaouab           #+#    #+#             */
-/*   Updated: 2022/06/27 19:58:36 by msaouab          ###   ########.fr       */
+/*   Updated: 2022/06/27 22:02:29 by msaouab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ void	Bureaucrat::incrementGrade() {
     std::cout << "Bureaucrat " << _name << " is incremented" << std::endl;
     this->_grade++;
 }
+
 void	Bureaucrat::decrementGade() {
 	if (this->_grade == heigh)
         throw GradeTooLowException();
